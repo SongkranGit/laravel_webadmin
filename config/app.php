@@ -177,6 +177,14 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
 
+
+
+        /*
+         * Third Party Providers
+         */
+
+        Prettus\Repository\Providers\RepositoryServiceProvider::class,
+
     ],
 
     /*

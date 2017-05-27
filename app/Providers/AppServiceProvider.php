@@ -2,12 +2,12 @@
 
 namespace App\Providers;
 
+use App\Repositories\IRoleRepository;
 use App\Repositories\IUserRepository;
+use App\Repositories\RoleRepository;
 use App\Repositories\UserRepository;
-use App\User;
-use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\Schema;
+use Illuminate\Support\ServiceProvider;
 
 
 class AppServiceProvider extends ServiceProvider
@@ -30,20 +30,19 @@ class AppServiceProvider extends ServiceProvider
     public function register()
     {
 
-
         /**
          * Services
          * */
 
+        if ($this->app->environment() !== 'production') {
+            $this->app->register(\Way\Generators\GeneratorsServiceProvider::class);
+            $this->app->register(\Xethron\MigrationsGenerator\MigrationsGeneratorServiceProvider::class);
+        }
 
 
+         //Repositories
+        $this->app->singleton(IUserRepository::class , UserRepository::class );
+        $this->app->singleton(IRoleRepository::class , RoleRepository::class);
 
-
-        /**
-         * Repositories
-         *
-         * */
-
-        $this->app->singleton(  IUserRepository::class ,  UserRepository::class );
     }
 }

@@ -6,13 +6,8 @@ namespace App\Repositories;
  * Date: 5/16/2017
  * Time: 10:05 AM
  */
-interface IUserRepository
+interface IUserRepository extends IBaseRepository
 {
-    public function getAll();
-
-    public function getById();
-
     public function currentUser();
-
 
 }

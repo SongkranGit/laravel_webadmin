@@ -24,7 +24,19 @@ Route::group(['prefix' => 'admin','middleware' => ['admin']], function () {
     Route::post('logout', 'Auth\LoginController@getLogout');
     Route::get('/dashboard', 'Backend\DashboardController@index');
     Route::get('/home', 'Backend\HomeController@index');
+
+
+    Route::resource('/user', 'Backend\UserController');
+    Route::post('/user/loadUsersDataTable', 'Backend\UserController@loadUsersDataTable')->name('user.loadUsersDataTable');
+
+
+
+    Route::resource('/promotion', 'Backend\PromotionController');
+    Route::resource('/slideshow', 'Backend\SlideshowController');
+    Route::resource('/setting', 'Backend\SettingController');
 });
+
+
 
 
 //Route::get('/role' , function (){

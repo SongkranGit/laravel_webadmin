@@ -7,6 +7,12 @@ use App\Http\Controllers\Controller;
 
 class HomeController extends Controller
 {
+
+    function __construct()
+    {
+        $this->middleware('admin');
+    }
+
     /**
      * Display a listing of the resource.
      *

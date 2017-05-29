@@ -120,7 +120,7 @@ class UserController extends Controller
                 ->withErrors($validator)
                 ->withInput();
         }else{
-            $input = $request->intersect(['name', 'email' , 'password' , 'is_active']);
+            $input = $request->except(['password']);
             $this->userRepository->update($id , $input);
             return response()->redirectTo('admin/user');
         }

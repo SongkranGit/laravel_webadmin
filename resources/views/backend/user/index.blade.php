@@ -19,9 +19,11 @@
                             <th>ลำดับ</th>
                             <th>ชื่อ-สกุล</th>
                             <th>อีเมล์</th>
+                            <th>สิทธิ</th>
+                            <th>สถานะ</th>
                             <th>วันที่สร้าง</th>
                             <th>วันที่แก้ไข</th>
-                            <th>แก้ไข</th>
+                            <th>&nbsp;</th>
                         </tr>
                         </thead>
                     </table>
@@ -56,10 +58,30 @@
             }, columnDefs: [
                 {targets: 1},
                 {targets: 2},
-                {targets: 3},
-                {targets: 4},
+                {targets: 3, render: function (data, type, row ) {
+                    var label_text = '<div class="text-left"> ';
+                    if (parseInt(row.role_id) == 1) {
+                        label_text += '<h4><span class=\"label label-primary\" >' + 'Admin' + '</span></h4>';
+                    } else {
+                        label_text += '<h4><span class=\"label label-info\" >' + 'User' + '</span></h4>';
+                    }
+                    label_text += '</div>'
+                    return label_text;
+                }},
+
+
+                {targets: 4, render: function (data, type, row ) {
+                    var label_text = '<div class="text-left"> ';
+                    if (parseInt(row.is_active) == 0) {
+                        label_text += '<h4><span class=\"label label-success\" >' + 'ใช้งาน' + '</span></h4>';
+                    } else {
+                        label_text += '<h4><span class=\"label label-danger\" >' + 'ไม่ใช้งาน' + '</span></h4>';
+                    }
+                    label_text += '</div>'
+                    return label_text;
+                }},
                 {
-                    targets: 5, render: function (data, type, row) {
+                    targets: 7, render: function (data, type, row) {
                     var buttons = '<div class="btn-toolbar"> ';
                     buttons += '<a href="{{ url('/')}}/admin/user/' + row.id + '/edit "  class="btn btn-warning btn-sm glyphicon glyphicon-pencil " data-toggle="tooltip" data-placement="top" title="แก้ไขข้อมูล"></a>';
                     buttons += '<a href="javascript:void(0)" onclick="deleteData(' + row.id + ')" class="button_delete btn btn-danger btn-sm glyphicon glyphicon-trash" data-toggle="tooltip" data-placement="top" title="ลบข้อมูล"></a>';
@@ -72,6 +94,8 @@
                 {data: null, "sClass": "text-center", "bSortable": false, "sWidth": "3%"}, //1st column
                 {data: 'name', name: 'name'},
                 {data: 'email', name: 'email'},
+                {data: 'role_id', name: 'role_id'},
+                {data: 'is_active', name: 'is_active'},
                 {data: 'created_at', name: 'created_at'},
                 {data: 'updated_at', name: 'updated_at'}
             ],

@@ -14,14 +14,17 @@
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/logout', 'Auth\LoginController@logout');
 
 Route::group(['middleware' => ['guest']], function () {
     Route::get('/' , 'Frontend\HomeController@index');
     Route::get('/admin/login', 'Auth\LoginController@index');
+    Route::get('/getLogout', 'AuthController@getLogout');
 });
 
 Route::group(['prefix' => 'admin','middleware' => ['admin']], function () {
-    Route::post('logout', 'Auth\LoginController@getLogout');
+
+    Route::get('/logout', 'Backend\Auth\LoginController@getLogout');
     Route::get('/dashboard', 'Backend\DashboardController@index');
     Route::get('/home', 'Backend\HomeController@index');
 
@@ -37,15 +40,5 @@ Route::group(['prefix' => 'admin','middleware' => ['admin']], function () {
 });
 
 
-
-
-//Route::get('/role' , function (){
-//
-//    $user = \App\User::find(1);
-//    $role = \App\Role::find(1);
-//    $user->roles()->save($role);
-//
-//
-//});
 
 

@@ -67,7 +67,7 @@
                         <div class="item form-group">
                             <label class="control-label col-md-3 col-sm-3 col-xs-12">สิทธิ</label>
                             <div class="col-md-6 col-sm-6 col-xs-12">
-                                <select class="form-control" name="role">
+                                <select class="form-control" name="role_id">
                                     @if(isset($roles))
                                         @foreach($roles as $role)
                                             <option {{ $role_selected != null && $role_selected->id == $role->id ? 'selected' :''}} value="{{$role->id}}">
@@ -82,9 +82,9 @@
                         <div class="item form-group">
                             <label class="control-label col-md-3 col-sm-3 col-xs-12">สถานะ</label>
                             <div class="col-md-6 col-sm-6 col-xs-12">
-                                <select class="form-control" name="role">
-                                    <option value="0">Active</option>
-                                    <option value="1">InActive</option>
+                                <select class="form-control" name="is_active">
+                                    <option value="0" {{$user->is_active != null && $user->is_active == 0 ? 'selected': '' }}>Active</option>
+                                    <option value="1" {{$user->is_active != null && $user->is_active == 1 ? 'selected': '' }}>InActive</option>
                                 </select>
                             </div>
                         </div>

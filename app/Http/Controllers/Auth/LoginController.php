@@ -45,5 +45,13 @@ class LoginController extends Controller
     }
 
 
+    public function getLogout(){
+
+        Auth::logout();
+
+        dump('ssdfd');
+       // return redirect()->intended('admin/login');
+    }
+
 
 }

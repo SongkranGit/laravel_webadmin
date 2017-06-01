@@ -21,7 +21,7 @@ class SettingController extends Controller
      */
     public function index()
     {
-        return view('backend.setting.index');
+        return view('backend.setting.setting');
     }
 
     /**
@@ -31,7 +31,7 @@ class SettingController extends Controller
      */
     public function create()
     {
-        //
+        return view('backend.setting.entry');
     }
 
     /**
@@ -76,7 +76,7 @@ class SettingController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        return view('backend.setting.entry');
     }
 
     /**

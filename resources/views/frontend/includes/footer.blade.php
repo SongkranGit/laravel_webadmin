@@ -67,7 +67,7 @@
 
             <div class="clearfix margin_top2"></div>
 
-            <img src="images/footer-logo3.png" alt="" />
+            <img src="{{asset('frontend/images/footer-logo3.png')}}" alt="" />
 
         </div><!-- end section -->
 
@@ -82,7 +82,7 @@
 
             <div class="one_half animate" data-anim-type="fadeInRight" data-anim-delay="200">
 
-                Copyright © 2015 LinStar.com. All rights reserved.
+                Copyright © 2017 ControlLabMedical.com All rights reserved.
 
             </div>
 

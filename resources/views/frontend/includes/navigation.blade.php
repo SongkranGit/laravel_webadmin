@@ -1,9 +1,8 @@
 <?php $active_menu = Request::segment(1);?>
+
 <div class="top_section3">
     <div class="container">
-
         <div class="left">
-
             <!-- Logo -->
             <div>
                 <a href="index.html" id="logo23">{{config('app.site_name')}}</a>
@@ -17,9 +16,7 @@
                 <li><i class="fa fa-phone"></i></li>
                 <li><em>Call Us</em>
                     <strong>+1 123-456-789000</strong></li>
-
             </ul>
-
         </div><!-- end right -->
 
     </div>
@@ -57,5 +54,7 @@
     </div>
 
 </header>
+
+
 
 <div class="clearfix"></div>

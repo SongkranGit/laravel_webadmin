@@ -12,8 +12,8 @@ return [
     | any other location as required by the application or its packages.
     */
 
-    'name' => env('APP_NAME', 'WebAdmin'),
-    'site_name' => env('SITE_NAME', 'WebAdmin'),
+    'name' => env('APP_NAME', 'ControlLabMedical'),
+    'site_name' => env('SITE_NAME', 'ControlLabMedical'),
 
     /*
     |--------------------------------------------------------------------------

@@ -13,11 +13,12 @@
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+//Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/' , 'Frontend\HomeController@index');
 Route::get('/logout', 'Auth\LoginController@logout');
 
 Route::group(['middleware' => ['guest']], function () {
-    Route::get('/' , 'Frontend\HomeController@index');
+
     Route::get('/admin/login', 'Auth\LoginController@index');
     Route::get('/getLogout', 'AuthController@getLogout');
 });

@@ -8,19 +8,16 @@ use App\Repositories\IUserRepository as IUserRepository;
 
 class HomeController extends Controller
 {
-    /**
-     * @var IUserRepository
-     */
-    private $userRepository;
+
 
     /**
      * Create a new controller instance.
      *
      * @return void
      */
-    public function __construct(IUserRepository $userRepository)
+    public function __construct()
     {
-        $this->userRepository = $userRepository;
+
     }
 
     /**
@@ -30,8 +27,6 @@ class HomeController extends Controller
      */
     public function index()
     {
-//        Auth::user();
-        $user = $this->userRepository->currentUser();
-        return view('home');
+        return view('frontend.home');
     }
 }

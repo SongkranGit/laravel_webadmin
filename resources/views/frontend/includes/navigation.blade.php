@@ -1,3 +1,31 @@
+<div class="top_section3">
+    <div class="container">
+
+        <div class="left">
+
+            <!-- Logo -->
+            <div>
+                <a href="index.html" id="logo23">{{config('app.site_name')}}</a>
+            </div>
+
+        </div><!-- end left -->
+
+        <div class="right">
+
+            <ul class="tinfo last">
+                <li><i class="fa fa-phone"></i></li>
+                <li><em>Call Us</em>
+                    <strong>+1 123-456-789000</strong></li>
+
+            </ul>
+
+        </div><!-- end right -->
+
+    </div>
+</div><!-- end top navigation links -->
+
+<div class="clearfix"></div>
+
 <header class="header">
 
     <div class="container">
@@ -19,24 +47,24 @@
 
                         <ul class="nav navbar-nav">
 
-                            <li class="dropdown yamm-fw"> <a href="index-medical.html" class="dropdown-toggle active">Home</a>
+                            <li class="dropdown yamm-fw"> <a href="{{url('home')}}" class="dropdown-toggle active">Home</a>
 
 
                             </li>
 
-                            <li class="dropdown"><a href="about.html" class="dropdown-toggle">About Us</a>
+                            <li class="dropdown"><a href="{{url('aboutus')}}" class="dropdown-toggle">About Us</a>
 
                             </li>
 
-                            <li class="dropdown yamm-fw"> <a href="left-sidebar.html" class="dropdown-toggle">Our Services</a>
+                            <li class="dropdown yamm-fw"> <a href="{{url('ourservice')}}" class="dropdown-toggle">Our Services</a>
 
                             </li>
 
-                            <li class="dropdown"><a href="portfolio-5.html" class="dropdown-toggle">Promotion</a>
+                            <li class="dropdown"><a href="{{url('promotion')}}" class="dropdown-toggle">Promotion</a>
 
                             </li>
 
-                            <li class="dropdown"><a href="portfolio-5.html" class="dropdown-toggle">Contact Us</a>
+                            <li class="dropdown"><a href="{{url('contactus')}}" class="dropdown-toggle">Contact Us</a>
 
                             </li>
 
@@ -53,3 +81,5 @@
     </div>
 
 </header>
+
+<div class="clearfix"></div>

@@ -1,38 +1,6 @@
 @extends('frontend.layouts.app')
 @section('content')
 
-    <div class="top_section3">
-        <div class="container">
-
-            <div class="left">
-
-                <!-- Logo -->
-                <div>
-                    <a href="index.html" id="logo23">{{config('app.site_name')}}</a>
-                </div>
-
-            </div><!-- end left -->
-
-            <div class="right">
-
-                <ul class="tinfo last">
-                    <li><i class="fa fa-phone"></i></li>
-                    <li><em>Call Us</em>
-                        <strong>+1 123-456-789000</strong></li>
-
-                </ul>
-
-            </div><!-- end right -->
-
-        </div>
-    </div><!-- end top navigation links -->
-
-    <div class="clearfix"></div>
-
-    @include('frontend.includes.navigation')
-
-    <div class="clearfix"></div>
-
     <!-- Slider
     ======================================= -->
 
@@ -51,8 +19,7 @@
                     data-effect="bottom(45)"
                     data-duration="2000"
                     data-delay="500"
-                    data-ease="easeOutExpo"
-                >
+                    data-ease="easeOutExpo">
                     trust worthy and timely
 
                 </h3>

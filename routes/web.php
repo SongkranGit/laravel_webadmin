@@ -25,11 +25,13 @@ Route::resource('/aboutus', 'Frontend\AboutUsController');
 Route::resource('/contactus', 'Frontend\ContactUsController');
 Route::resource('/ourservice', 'Frontend\OurServiceController');
 
+Route::get('admin/login', 'Backend\Auth\LoginController@showLoginForm');
+//Route::get('admin', 'Backend\Auth\LoginController@showLoginForm');
+
 Route::group(['middleware' => ['guest']], function () {
 
-  //  Route::get('/admin/login', 'Auth\LoginController@index');
-    Route::get('/getLogout', 'AuthController@getLogout');
-    Route::get('/logout', 'Auth\LoginController@logout');
+    Route::get('/getLogout', 'Backend\AuthController@getLogout');
+    Route::post('admin/login', 'Backend\Auth\LoginController@login')->name('admin.login');
 
 });
 
@@ -40,7 +42,7 @@ Route::group(['prefix' => 'admin','middleware' => ['admin']], function () {
     Route::resource('/slideshow', 'Backend\SlideshowController');
     Route::resource('/setting', 'Backend\SettingController');
 
-    Route::get('/login', 'Backend\Auth\LoginController@index');
+   // Route::get('/login', 'Backend\Auth\LoginController@index');
     Route::get('/logout', 'Backend\Auth\LoginController@getLogout');
     Route::get('/dashboard', 'Backend\DashboardController@index');
     Route::get('/home', 'Backend\HomeController@index');

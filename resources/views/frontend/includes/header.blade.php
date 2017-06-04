@@ -81,6 +81,39 @@
 
 </head>
 <body>
-
+<style>
+    /*.header{*/
+        /*margin-top:40px;*/
+    /*}*/
+</style>
 <div class="site_wrapper">
 
+    {{--<div class="top_nav">--}}
+        {{--<div class="container">--}}
+
+            {{--<div class="left">--}}
+
+                {{--<a href="mailto:info@yourdomain.com"><i class="fa fa-envelope"></i>&nbsp; info@yourdomain.com</a> <i class="fa fa-phone-square"></i>&nbsp; +88 123 456 7890--}}
+
+            {{--</div><!-- end left -->--}}
+
+            {{--<div class="right">--}}
+
+                {{--<a href="#" class="tpbut two active"><i class="fa fa-pencil-square-o"></i>&nbsp; Register</a>--}}
+                {{--<a href="#" class="tpbut"><i class="fa fa-lock"></i>&nbsp; Login</a>--}}
+
+                {{--<ul class="topsocial">--}}
+                    {{--<li><a href="#"><i class="fa fa-facebook"></i></a></li>--}}
+                    {{--<li><a href="#"><i class="fa fa-twitter"></i></a></li>--}}
+                    {{--<li><a href="#"><i class="fa fa-google-plus"></i></a></li>--}}
+                    {{--<li><a href="#"><i class="fa fa-youtube"></i></a></li>--}}
+                    {{--<li><a href="#"><i class="fa fa-rss"></i></a></li>--}}
+                {{--</ul>--}}
+
+            {{--</div><!-- end right -->--}}
+
+        {{--</div>--}}
+    {{--</div><!-- end top navigation links -->--}}
+
+
+    {{--<div class="clearfix"></div>--}}

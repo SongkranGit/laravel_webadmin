@@ -71,41 +71,7 @@
     <div class="content_fullwidth less2">
         <div class="container">
 
-            <div class="logregform">
-
-                <div class="title">
-
-                    <h3>Account Login</h3>
-
-                    <p>Not member yet? &nbsp;<a href="register.html">Sign Up.</a></p>
-
-                </div>
-
-                <div class="feildcont">
-
-                    <form role="form">
-
-                        <label><i class="fa fa-user"></i> Username / Email</label>
-                        <input type="text">
-
-                        <label><i class="fa fa-lock"></i> Password</label>
-                        <input type="password">
-
-                        <div class="checkbox">
-                            <label>
-                                <input type="checkbox">
-                            </label>
-                            <label>Remember Me</label>
-                            <label><a href="#"><strong>Forgot Password?</strong></a></label>
-                        </div>
-
-                        <button type="button" class="fbut">Login Now!</button>
-
-                    </form>
-
-                </div>
-
-            </div>
+            @yield('content')
 
         </div>
     </div><!-- end content area -->

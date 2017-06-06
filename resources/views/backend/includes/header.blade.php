@@ -34,7 +34,7 @@
     <link href="{{asset('backend/vendors/bootstrap-dialog/css/bootstrap-dialog.min.css')}}" rel="stylesheet">
 
     <!-- Custom Theme Style -->
-    <link href="{{asset('css/custom.css')}}" rel="stylesheet">
+    <link href="{{asset('backend/css/custom.css')}}" rel="stylesheet">
 
     <!-- Scripts -->
     <script>

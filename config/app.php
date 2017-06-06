@@ -13,7 +13,7 @@ return [
     */
 
     'name' => env('APP_NAME', 'ControlLabMedical'),
-    'site_name' => env('SITE_NAME', 'ControlLabMedical'),
+    'site_name' => env('SITE_NAME', 'ControlLab Medical'),
 
     /*
     |--------------------------------------------------------------------------

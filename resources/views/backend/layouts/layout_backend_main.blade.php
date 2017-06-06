@@ -66,7 +66,7 @@
 <script src="{{asset('backend/vendors/DateJS/build/date.js')}}"></script>
 
 <!-- bootstrap-daterangepicker -->
-<script src="{{asset('backend/vendors/moment/min/moment.min.js')}}../"></script>
+<script src="{{asset('backend/vendors/moment/min/moment.min.js')}}"></script>
 <script src="{{asset('backend/vendors/bootstrap-daterangepicker/daterangepicker.js')}}"></script>
 
 
@@ -87,10 +87,10 @@
 <script src="{{asset("backend/vendors/bootstrap-dialog/js/bootstrap-dialog.min.js")}}"></script>
 <!-- validator -->
 {{--<script src="{{asset('vendors/jquery.validate/jquery.validate.min.js')}}"></script>--}}
-<script src="{{asset('js/validator.min.js')}}"></script>
+<script src="{{asset('backend/js/validator.min.js')}}"></script>
 
 <!-- Custom Theme Scripts -->
-<script src="{{asset('js/custom.js')}}"></script>
+<script src="{{asset('backend/js/custom.js')}}"></script>
 
 <script type="text/javascript">
     $.ajaxSetup({

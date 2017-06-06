@@ -1,5 +1,7 @@
 <?php $active_menu = Request::segment(1);?>
 
+
+
 <div class="top_section3">
     <div class="container">
         <div class="left">
@@ -39,7 +41,7 @@
                 <div id="navbar-collapse-1" class="navbar-collapse collapse">
                     <nav>
                         <ul class="nav navbar-nav">
-                            <li class="dropdown "><a href="{{url('home')}}" class="dropdown-toggle {{$active_menu=='home'?'active':''}}">Home</a></li>
+                            <li class="dropdown "><a href="{{url('home')}}" class="dropdown-toggle {{$active_menu=='home'||$active_menu==''?'active':''}}">Home</a></li>
                             <li class="dropdown"><a href="{{url('aboutus')}}" class="dropdown-toggle {{$active_menu=='aboutus'?'active':''}}" >About Us</a></li>
                             <li class="dropdown "><a href="{{url('ourservice')}}" class="dropdown-toggle {{$active_menu=='ourservice'?'active':''}}" >Our Services</a></li>
                             <li class="dropdown"><a href="{{url('promotion')}}" class="dropdown-toggle {{$active_menu=='promotion'?'active':''}}" >Promotion</a></li>

@@ -42,7 +42,7 @@ Route::group(['prefix' => 'admin','middleware' => ['admin']], function () {
     Route::resource('/slideshow', 'Backend\SlideshowController');
     Route::resource('/setting', 'Backend\SettingController');
 
-    // Route::get('/login', 'Backend\Auth\LoginController@index');
+   // Route::get('/login', 'Backend\Auth\LoginController@index');
     Route::get('/logout', 'Backend\Auth\LoginController@getLogout');
     Route::get('/dashboard', 'Backend\DashboardController@index');
     Route::get('/home', 'Backend\HomeController@index');

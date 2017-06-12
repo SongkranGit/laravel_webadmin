@@ -28,7 +28,7 @@
         var setting = $.extend(defaoults, options);
         
         //setting
-        var slider = $('#slider'),
+        var slider = $('#slideshow'),
             slView = $('#sl-view'),
             slDiv = $('.sl-div'),
             slDivLen = slDiv.length,

@@ -1153,7 +1153,7 @@ newMomentProto.week = newMomentProto.weeks = function(input) {
 //
 // SETTER
 // You can supply a Duration, a Moment, or a Duration-like argument.
-// When setting the time, and the moment has an ambiguous time, it then becomes unambiguous.
+// When Setting the time, and the moment has an ambiguous time, it then becomes unambiguous.
 newMomentProto.time = function(time) {
 
 	// Fallback to the original method (if there is one) if this moment wasn't created via FullCalendar.
@@ -1999,7 +1999,7 @@ var ListenerMixin = FC.ListenerMixin = (function() {
 ;;
 
 // simple class for toggle a `isIgnoringMouse` flag on delay
-// initMouseIgnoring must first be called, with a millisecond delay setting.
+// initMouseIgnoring must first be called, with a millisecond delay Setting.
 var MouseIgnorerMixin = {
 
 	isIgnoringMouse: false, // bool
@@ -4407,7 +4407,7 @@ Grid.mixin({
 
 	// Builds a listener that will track user-dragging on an event segment.
 	// Generic enough to work with any type of Grid.
-	// Has side effect of setting/unsetting `segDragListener`
+	// Has side effect of Setting/unsetting `segDragListener`
 	buildSegDragListener: function(seg) {
 		var _this = this;
 		var view = this.view;
@@ -4525,7 +4525,7 @@ Grid.mixin({
 
 	// seg isn't draggable, but let's use a generic DragListener
 	// simply for the delay, so it can be selected.
-	// Has side effect of setting/unsetting `segDragListener`
+	// Has side effect of Setting/unsetting `segDragListener`
 	buildSegSelectListener: function(seg) {
 		var _this = this;
 		var view = this.view;
@@ -4632,7 +4632,7 @@ Grid.mixin({
 		var el;
 		var accept;
 
-		if (view.opt('droppable')) { // only listen if this setting is on
+		if (view.opt('droppable')) { // only listen if this Setting is on
 			el = $((ui ? ui.item : null) || ev.target);
 
 			// Test that the dragged element passes the dropAccept selector or filter function.
@@ -4917,8 +4917,8 @@ Grid.mixin({
 	// Compute the text that should be displayed on an event's element.
 	// `range` can be the Event object itself, or something range-like, with at least a `start`.
 	// If event times are disabled, or the event has no time, will return a blank string.
-	// If not specified, formatStr will default to the eventTimeFormat setting,
-	// and displayEnd will default to the displayEventEnd setting.
+	// If not specified, formatStr will default to the eventTimeFormat Setting,
+	// and displayEnd will default to the displayEventEnd Setting.
 	getEventTimeText: function(range, formatStr, displayEnd) {
 
 		if (formatStr == null) {
@@ -7394,7 +7394,7 @@ var TimeGrid = FC.TimeGrid = Grid.extend(DayTableMixin, {
 
 	// Renders a visual indication of a selection. Overrides the default, which was to simply render a highlight.
 	renderSelection: function(span) {
-		if (this.view.opt('selectHelper')) { // this setting signals that a mock helper event should be rendered
+		if (this.view.opt('selectHelper')) { // this Setting signals that a mock helper event should be rendered
 
 			// normally acceps an eventLocation, span has a start/end, which is good enough
 			this.renderEventLocationHelper(span);
@@ -11279,7 +11279,7 @@ FC.locale = function(localeCode, newFcOptions) {
 
 	// compute locale options that weren't defined.
 	// always do this. newFcOptions can be undefined when initializing from i18n file,
-	// so no way to tell if this is an initialization or a default-setting.
+	// so no way to tell if this is an initialization or a default-Setting.
 	momOptions = getMomentLocaleData(localeCode); // will fall back to en
 	$.each(momComputableOptions, function(name, func) {
 		if (fcOptions[name] == null) {
@@ -12975,7 +12975,7 @@ var BasicView = FC.BasicView = View.extend({
 	},
 
 
-	// Generates an HTML attribute string for setting the width of the week number column, if it is known
+	// Generates an HTML attribute string for Setting the width of the week number column, if it is known
 	weekNumberStyleAttr: function() {
 		if (this.weekNumberWidth !== null) {
 			return 'style="width:' + this.weekNumberWidth + 'px"';
@@ -13460,7 +13460,7 @@ var AgendaView = FC.AgendaView = View.extend({
 	},
 
 
-	// Generates an HTML attribute string for setting the width of the axis, if it is known
+	// Generates an HTML attribute string for Setting the width of the axis, if it is known
 	axisStyleAttr: function() {
 		if (this.axisWidth !== null) {
 			 return 'style="width:' + this.axisWidth + 'px"';

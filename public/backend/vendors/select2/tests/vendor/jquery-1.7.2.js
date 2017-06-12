@@ -1598,7 +1598,7 @@ jQuery.support = (function() {
 
 		if ( typeof div.style.zoom !== "undefined" ) {
 			// Check if natively block-level elements act like inline-block
-			// elements when setting their display to 'inline' and giving
+			// elements when Setting their display to 'inline' and giving
 			// them layout
 			// (IE < 8 does this)
 			div.innerHTML = "";
@@ -2420,7 +2420,7 @@ jQuery.fn.extend({
 
 			hooks = jQuery.valHooks[ this.type ] || jQuery.valHooks[ this.nodeName.toLowerCase() ];
 
-			// If set returns undefined, fall back to normal setting
+			// If set returns undefined, fall back to normal Setting
 			if ( !hooks || !("set" in hooks) || hooks.set( this, val, "value" ) === undefined ) {
 				this.value = val;
 			}
@@ -2578,7 +2578,7 @@ jQuery.extend({
 					propName = jQuery.propFix[ name ] || name;
 					isBool = rboolean.test( name );
 
-					// See #9699 for explanation of this approach (setting first, then removal)
+					// See #9699 for explanation of this approach (Setting first, then removal)
 					// Do not do this for boolean attributes (see #10870)
 					if ( !isBool ) {
 						jQuery.attr( elem, name, "" );
@@ -2735,7 +2735,7 @@ boolHook = {
 	}
 };
 
-// IE6/7 do not support getting/setting some attributes with get/setAttribute
+// IE6/7 do not support getting/Setting some attributes with get/setAttribute
 if ( !getSetAttribute ) {
 
 	fixSpecified = {
@@ -6160,7 +6160,7 @@ function cloneFixAttributes( src, dest ) {
 			dest.defaultChecked = dest.checked = src.checked;
 		}
 
-		// IE6-7 get confused and end up setting the value of a cloned
+		// IE6-7 get confused and end up Setting the value of a cloned
 		// checkbox/radio button to an empty string instead of "on"
 		if ( dest.value !== src.value ) {
 			dest.value = src.value;
@@ -6580,7 +6580,7 @@ jQuery.fn.css = function( name, value ) {
 
 jQuery.extend({
 	// Add in style property hooks for overriding the default
-	// behavior of getting and setting a style property
+	// behavior of getting and Setting a style property
 	cssHooks: {
 		opacity: {
 			get: function( elem, computed ) {
@@ -6609,7 +6609,7 @@ jQuery.extend({
 	},
 
 	// Add in properties whose names you wish to fix before
-	// setting or getting the value
+	// Setting or getting the value
 	cssProps: {
 		// normalize float css property
 		"float": jQuery.support.cssFloat ? "cssFloat" : "styleFloat"
@@ -6628,7 +6628,7 @@ jQuery.extend({
 
 		name = jQuery.cssProps[ origName ] || origName;
 
-		// Check if we're setting a value
+		// Check if we're Setting a value
 		if ( value !== undefined ) {
 			type = typeof value;
 
@@ -6753,7 +6753,7 @@ if ( document.documentElement.currentStyle ) {
 			ret = elem.currentStyle && elem.currentStyle[ name ],
 			style = elem.style;
 
-		// Avoid setting ret to empty string here
+		// Avoid Setting ret to empty string here
 		// so we don't default to auto
 		if ( ret == null && style && (uncomputed = style[ name ]) ) {
 			ret = uncomputed;
@@ -6882,10 +6882,10 @@ if ( !jQuery.support.opacity ) {
 				filter = currentStyle && currentStyle.filter || style.filter || "";
 
 			// IE has trouble with opacity if it does not have layout
-			// Force it by setting the zoom level
+			// Force it by Setting the zoom level
 			style.zoom = 1;
 
-			// if setting opacity to 1, and no other filters exist - attempt to remove filter attribute #6652
+			// if Setting opacity to 1, and no other filters exist - attempt to remove filter attribute #6652
 			if ( value >= 1 && jQuery.trim( filter.replace( ralpha, "" ) ) === "" ) {
 
 				// Setting style.filter to null, "" & " " still leave "filter:" in the cssText
@@ -6914,7 +6914,7 @@ jQuery(function() {
 		jQuery.cssHooks.marginRight = {
 			get: function( elem, computed ) {
 				// WebKit Bug 13343 - getComputedStyle returns wrong value for margin-right
-				// Work around by temporarily setting element display to inline-block
+				// Work around by temporarily Setting element display to inline-block
 				return jQuery.swap( elem, { "display": "inline-block" }, function() {
 					if ( computed ) {
 						return curCSS( elem, "margin-right" );
@@ -8780,7 +8780,7 @@ jQuery.extend({
 });
 
 jQuery.fx.prototype = {
-	// Simple function for setting a style value
+	// Simple function for Setting a style value
 	update: function() {
 		if ( this.options.step ) {
 			this.options.step.call( this.elem, this.now, this );

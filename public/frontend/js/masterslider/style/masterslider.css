@@ -498,7 +498,7 @@
 	100% 	{-webkit-transform: scale(1.5);	opacity: 0; }
 }
 
-/* In Android browser, using css animations over slider causes some crashes */
+/* In Android browser, using css animations over slideshow causes some crashes */
 .ms-android .ms-tooltip-point .ms-point-border{
 	animation:none;
 	-moz-animation:none;

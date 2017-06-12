@@ -115,13 +115,13 @@
     (function($) {
         "use strict";
         var slider = new MasterSlider();
-        // adds Arrows navigation control to the slider.
+        // adds Arrows navigation control to the slideshow.
         slider.control('arrows');
         slider.control('bullets');
 
         slider.setup('masterslider' , {
-            width:1400,    // slider standard width
-            height:620,   // slider standard height
+            width:1400,    // slideshow standard width
+            height:620,   // slideshow standard height
             space:0,
             speed:27,
             layout:'fullwidth',

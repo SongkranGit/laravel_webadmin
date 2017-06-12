@@ -166,7 +166,7 @@
 	-o-animation: point-anim 1.5s infinite;
 }
 
-/* In Android browser, using css animations over slider causes some crashes */
+/* In Android browser, using css animations over slideshow causes some crashes */
 .ms-android.ms-skin-light-5 .ms-tooltip-point .ms-point-border{
 	animation:none;
 	-moz-animation:none;

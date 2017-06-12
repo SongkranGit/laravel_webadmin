@@ -330,7 +330,7 @@ var jscolor = {
 		this.adjust = true; // adjust value to uniform notation?
 		this.hash = false; // prefix color with # symbol?
 		this.caps = true; // uppercase?
-		this.slider = true; // show the value/saturation slider?
+		this.slider = true; // show the value/saturation slideshow?
 		this.valueElement = target; // value holder
 		this.styleElement = target; // where to reflect current color
 		this.onImmediateChange = null; // onchange callback (can be either string or function)
@@ -614,7 +614,7 @@ var jscolor = {
 			p.padM.onmouseup =
 			p.padM.onmouseout = function() { if(holdPad) { holdPad=false; jscolor.fireEvent(valueElement,'change'); } };
 			p.padM.onmousedown = function(e) {
-				// if the slider is at the bottom, move it up
+				// if the slideshow is at the bottom, move it up
 				switch(modeID) {
 					case 0: if (THIS.hsv[2] === 0) { THIS.fromHSV(null, null, 1.0); }; break;
 					case 1: if (THIS.hsv[1] === 0) { THIS.fromHSV(null, 1.0, null); }; break;
@@ -665,12 +665,12 @@ var jscolor = {
 			p.padM.style.height = p.box.style.height;
 			p.padM.style.cursor = 'crosshair';
 
-			// slider image
+			// slideshow image
 			p.sld.style.overflow = 'hidden';
 			p.sld.style.width = jscolor.images.sld[0]+'px';
 			p.sld.style.height = jscolor.images.sld[1]+'px';
 
-			// slider border
+			// slideshow border
 			p.sldB.style.display = THIS.slider ? 'block' : 'none';
 			p.sldB.style.position = 'absolute';
 			p.sldB.style.right = THIS.pickerFace+'px';
@@ -678,7 +678,7 @@ var jscolor = {
 			p.sldB.style.border = THIS.pickerInset+'px solid';
 			p.sldB.style.borderColor = THIS.pickerInsetColor;
 
-			// slider mouse area
+			// slideshow mouse area
 			p.sldM.style.display = THIS.slider ? 'block' : 'none';
 			p.sldM.style.position = 'absolute';
 			p.sldM.style.right = '0';
@@ -764,7 +764,7 @@ var jscolor = {
 				(THIS.pickerFace+THIS.pickerInset+x - Math.floor(jscolor.images.cross[0]/2)) + 'px ' +
 				(THIS.pickerFace+THIS.pickerInset+y - Math.floor(jscolor.images.cross[1]/2)) + 'px';
 
-			// redraw the slider image
+			// redraw the slideshow image
 			var seg = jscolor.picker.sld.childNodes;
 
 			switch(modeID) {
@@ -805,7 +805,7 @@ var jscolor = {
 
 
 		function redrawSld() {
-			// redraw the slider pointer
+			// redraw the slideshow pointer
 			switch(modeID) {
 				case 0: var yComponent = 2; break;
 				case 1: var yComponent = 1; break;

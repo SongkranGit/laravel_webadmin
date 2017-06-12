@@ -513,7 +513,7 @@ define([
         arguments.length > 0 && window.console && console.warn) {
       console.warn(
         'Select2: Data can no longer be set using `select2("data")`. You ' +
-        'should consider setting the value instead using `$element.val()`.'
+        'should consider Setting the value instead using `$element.val()`.'
       );
     }
 

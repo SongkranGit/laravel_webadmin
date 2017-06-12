@@ -42,7 +42,7 @@
   /**
    * ## Runner Parameters
    *
-   * More browser specific code - wrap the query string in an object and to allow for getting/setting parameters from the runner user interface.
+   * More browser specific code - wrap the query string in an object and to allow for getting/Setting parameters from the runner user interface.
    */
 
   var queryString = new jasmine.QueryString({

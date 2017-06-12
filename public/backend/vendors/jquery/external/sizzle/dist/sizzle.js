@@ -282,7 +282,7 @@ function Sizzle( selector, context, results, seed ) {
 				// Exclude object elements
 				} else if ( context.nodeName.toLowerCase() !== "object" ) {
 
-					// Capture the context ID, setting it first if necessary
+					// Capture the context ID, Setting it first if necessary
 					if ( (nid = context.getAttribute( "id" )) ) {
 						nid = nid.replace( rescape, "\\$&" );
 					} else {

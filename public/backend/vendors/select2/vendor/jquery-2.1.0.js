@@ -1162,7 +1162,7 @@
                     assert(function( div ) {
                         // Select is set to empty string on purpose
                         // This is to test IE's treatment of not explicitly
-                        // setting a boolean content attribute,
+                        // Setting a boolean content attribute,
                         // since its presence should be enough
                         // http://bugs.jquery.com/ticket/12359
                         div.innerHTML = "<select t=''><option selected=''></option></select>";
@@ -5823,7 +5823,7 @@
 
     jQuery.extend({
         // Add in style property hooks for overriding the default
-        // behavior of getting and setting a style property
+        // behavior of getting and Setting a style property
         cssHooks: {
             opacity: {
                 get: function( elem, computed ) {
@@ -5851,7 +5851,7 @@
         },
 
         // Add in properties whose names you wish to fix before
-        // setting or getting the value
+        // Setting or getting the value
         cssProps: {
             // normalize float css property
             "float": "cssFloat"
@@ -5875,7 +5875,7 @@
             // followed by the unprefixed version
             hooks = jQuery.cssHooks[ name ] || jQuery.cssHooks[ origName ];
 
-            // Check if we're setting a value
+            // Check if we're Setting a value
             if ( value !== undefined ) {
                 type = typeof value;
 
@@ -5990,7 +5990,7 @@
         function( elem, computed ) {
             if ( computed ) {
                 // WebKit Bug 13343 - getComputedStyle returns wrong value for margin-right
-                // Work around by temporarily setting element display to inline-block
+                // Work around by temporarily Setting element display to inline-block
                 return jQuery.swap( elem, { "display": "inline-block" },
                     curCSS, [ elem, "marginRight" ] );
             }
@@ -6154,7 +6154,7 @@
     };
 
 // Support: IE9
-// Panic based approach to setting things on disconnected nodes
+// Panic based approach to Setting things on disconnected nodes
 
     Tween.propHooks.scrollTop = Tween.propHooks.scrollLeft = {
         set: function( tween ) {
@@ -6614,7 +6614,7 @@
     jQuery.fn.extend({
         fadeTo: function( speed, to, easing, callback ) {
 
-            // show any hidden elements after setting opacity to 0
+            // show any hidden elements after Setting opacity to 0
             return this.filter( isHidden ).css( "opacity", 0 ).show()
 
                 // animate to the value specified
@@ -7287,7 +7287,7 @@
 
                 hooks = jQuery.valHooks[ this.type ] || jQuery.valHooks[ this.nodeName.toLowerCase() ];
 
-                // If set returns undefined, fall back to normal setting
+                // If set returns undefined, fall back to normal Setting
                 if ( !hooks || !("set" in hooks) || hooks.set( this, val, "value" ) === undefined ) {
                     this.value = val;
                 }

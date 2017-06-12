@@ -29,10 +29,10 @@
         methods = {},
         focused = true;
 
-    // Store a reference to the slider object
+    // Store a reference to the slideshow object
     $.data(el, "flexslider", slider);
 
-    // Private slider methods
+    // Private slideshow methods
     methods = {
       init: function() {
         slider.animating = false;
@@ -161,7 +161,7 @@
                 e.preventDefault();
                 var $slide = $(this),
                     target = $slide.index();
-                var posFromLeft = $slide.offset().left - $(slider).scrollLeft(); // Find position of slide relative to left of slider container
+                var posFromLeft = $slide.offset().left - $(slider).scrollLeft(); // Find position of slide relative to left of slideshow container
                 if( posFromLeft <= 0 && $slide.hasClass( namespace + 'active-slide' ) ) {
                   slider.flexAnimate(slider.getTarget("prev"), true);
                 } else if (!$(slider.vars.asNavFor).data('flexslider').animating && !$slide.hasClass(namespace + "active-slide")) {
@@ -702,7 +702,7 @@
 
           // INFINITE LOOP / REVERSE:
           if (carousel) {
-            //margin = (slider.vars.itemWidth > slider.w) ? slider.vars.itemMargin * 2 : slider.vars.itemMargin;
+            //margin = (slideshow.vars.itemWidth > slideshow.w) ? slideshow.vars.itemMargin * 2 : slideshow.vars.itemMargin;
             margin = slider.vars.itemMargin;
             calcNext = ((slider.itemW + margin) * slider.move) * slider.animatingTo;
             slideString = (calcNext > slider.limit && slider.visible !== 1) ? slider.limit : calcNext;
@@ -730,8 +730,8 @@
           }
         } else { // FADE:
           if (!touch) {
-            //slider.slides.eq(slider.currentSlide).fadeOut(slider.vars.animationSpeed, slider.vars.easing);
-            //slider.slides.eq(target).fadeIn(slider.vars.animationSpeed, slider.vars.easing, slider.wrapup);
+            //slideshow.slides.eq(slideshow.currentSlide).fadeOut(slideshow.vars.animationSpeed, slideshow.vars.easing);
+            //slideshow.slides.eq(target).fadeIn(slideshow.vars.animationSpeed, slideshow.vars.easing, slideshow.wrapup);
 
             slider.slides.eq(slider.currentSlide).css({"zIndex": 1}).animate({"opacity": 0}, slider.vars.animationSpeed, slider.vars.easing);
             slider.slides.eq(target).css({"zIndex": 2}).animate({"opacity": 1}, slider.vars.animationSpeed, slider.vars.easing, slider.wrapup);
@@ -871,7 +871,7 @@
           slider.cloneOffset = 1;
           // clear out old clones
           if (type !== "init") slider.container.find('.clone').remove();
-          // slider.container.append(slider.slides.first().clone().addClass('clone').attr('aria-hidden', 'true')).prepend(slider.slides.last().clone().addClass('clone').attr('aria-hidden', 'true'));
+          // slideshow.container.append(slideshow.slides.first().clone().addClass('clone').attr('aria-hidden', 'true')).prepend(slideshow.slides.last().clone().addClass('clone').attr('aria-hidden', 'true'));
 		      methods.uniqueID( slider.slides.first().clone().addClass('clone').attr('aria-hidden', 'true') ).appendTo( slider.container );
 		      methods.uniqueID( slider.slides.last().clone().addClass('clone').attr('aria-hidden', 'true') ).prependTo( slider.container );
         }
@@ -901,7 +901,7 @@
         slider.slides.css({"width": "100%", "float": "left", "marginRight": "-100%", "position": "relative"});
         if (type === "init") {
           if (!touch) {
-            //slider.slides.eq(slider.currentSlide).fadeIn(slider.vars.animationSpeed, slider.vars.easing);
+            //slideshow.slides.eq(slideshow.currentSlide).fadeIn(slideshow.vars.animationSpeed, slideshow.vars.easing);
             slider.slides.css({ "opacity": 0, "display": "block", "zIndex": 1 }).eq(slider.currentSlide).css({"zIndex": 2}).animate({"opacity": 1},slider.vars.animationSpeed,slider.vars.easing);
           } else {
             slider.slides.css({ "opacity": 0, "display": "block", "webkitTransition": "opacity " + slider.vars.animationSpeed / 1000 + "s ease", "zIndex": 1 }).eq(slider.currentSlide).css({ "opacity": 1, "zIndex": 2});
@@ -954,7 +954,7 @@
     slider.update = function(pos, action) {
       slider.doMath();
 
-      // update currentSlide and slider.animatingTo if necessary
+      // update currentSlide and slideshow.animatingTo if necessary
       if (!carousel) {
         if (pos < slider.currentSlide) {
           slider.currentSlide += 1;
@@ -997,9 +997,9 @@
       // update currentSlide, animatingTo, controlNav, and directionNav
       slider.update(pos, "add");
 
-      // update slider.slides
+      // update slideshow.slides
       slider.slides = $(slider.vars.selector + ':not(.clone)', slider);
-      // re-setup the slider to accomdate new slide
+      // re-setup the slideshow to accomdate new slide
       slider.setup();
 
       //FlexSlider: added() Callback
@@ -1023,9 +1023,9 @@
       slider.doMath();
       slider.update(pos, "remove");
 
-      // update slider.slides
+      // update slideshow.slides
       slider.slides = $(slider.vars.selector + ':not(.clone)', slider);
-      // re-setup the slider to accomdate new slide
+      // re-setup the slideshow to accomdate new slide
       slider.setup();
 
       // FlexSlider: removed() Callback
@@ -1036,7 +1036,7 @@
     methods.init();
   };
 
-  // Ensure the slider isn't focussed if the window loses focus.
+  // Ensure the slideshow isn't focussed if the window loses focus.
   $( window ).blur( function ( e ) {
     focused = false;
   }).focus( function ( e ) {
@@ -1052,9 +1052,9 @@
     direction: "horizontal",        //String: Select the sliding direction, "horizontal" or "vertical"
     reverse: false,                 //{NEW} Boolean: Reverse the animation direction
     animationLoop: true,            //Boolean: Should the animation loop? If false, directionNav will received "disable" classes at either end
-    smoothHeight: false,            //{NEW} Boolean: Allow height of the slider to animate smoothly in horizontal mode
-    startAt: 0,                     //Integer: The slide that the slider should start on. Array notation (0 = first slide)
-    slideshow: true,                //Boolean: Animate slider automatically
+    smoothHeight: false,            //{NEW} Boolean: Allow height of the slideshow to animate smoothly in horizontal mode
+    startAt: 0,                     //Integer: The slide that the slideshow should start on. Array notation (0 = first slide)
+    slideshow: true,                //Boolean: Animate slideshow automatically
     slideshowSpeed: 14000,           //Integer: Set the speed of the slideshow cycling, in milliseconds
     animationSpeed: 900,            //Integer: Set the speed of animations, in milliseconds
     initDelay: 0,                   //{NEW} Integer: Set an initialization delay, in milliseconds
@@ -1063,11 +1063,11 @@
 
     // Usability features
     pauseOnAction: true,            //Boolean: Pause the slideshow when interacting with control elements, highly recommended.
-    pauseOnHover: false,            //Boolean: Pause the slideshow when hovering over slider, then resume when no longer hovering
+    pauseOnHover: false,            //Boolean: Pause the slideshow when hovering over slideshow, then resume when no longer hovering
     pauseInvisible: true,   		//{NEW} Boolean: Pause the slideshow when tab is invisible, resume when visible. Provides better UX, lower CPU usage.
     useCSS: true,                   //{NEW} Boolean: Slider will use CSS3 transitions if available
-    touch: true,                    //{NEW} Boolean: Allow touch swipe navigation of the slider on touch-enabled devices
-    video: false,                   //{NEW} Boolean: If using video in the slider, will prevent CSS3 3D Transforms to avoid graphical glitches
+    touch: true,                    //{NEW} Boolean: Allow touch swipe navigation of the slideshow on touch-enabled devices
+    video: false,                   //{NEW} Boolean: If using video in the slideshow, will prevent CSS3 3D Transforms to avoid graphical glitches
 
     // Primary Controls
     controlNav: true,               //Boolean: Create navigation for paging control of each clide? Note: Leave true for manualControls usage
@@ -1076,9 +1076,9 @@
     nextText: "Next",               //String: Set the text for the "next" directionNav item
 
     // Secondary Navigation
-    keyboard: true,                 //Boolean: Allow slider navigating via keyboard left/right keys
-    multipleKeyboard: false,        //{NEW} Boolean: Allow keyboard navigation to affect multiple sliders. Default behavior cuts out keyboard navigation with more than one slider present.
-    mousewheel: false,              //{UPDATED} Boolean: Requires jquery.mousewheel.js (https://github.com/brandonaaron/jquery-mousewheel) - Allows slider navigating via mousewheel
+    keyboard: true,                 //Boolean: Allow slideshow navigating via keyboard left/right keys
+    multipleKeyboard: false,        //{NEW} Boolean: Allow keyboard navigation to affect multiple sliders. Default behavior cuts out keyboard navigation with more than one slideshow present.
+    mousewheel: false,              //{UPDATED} Boolean: Requires jquery.mousewheel.js (https://github.com/brandonaaron/jquery-mousewheel) - Allows slideshow navigating via mousewheel
     pausePlay: false,               //Boolean: Create pause/play dynamic element
     pauseText: "Pause",             //String: Set the text for the "pause" pausePlay item
     playText: "Play",               //String: Set the text for the "play" pausePlay item
@@ -1086,25 +1086,25 @@
     // Special properties
     controlsContainer: "",          //{UPDATED} jQuery Object/Selector: Declare which container the navigation elements should be appended too. Default container is the FlexSlider element. Example use would be $(".flexslider-container"). Property is ignored if given element is not found.
     manualControls: "",             //{UPDATED} jQuery Object/Selector: Declare custom control navigation. Examples would be $(".flex-control-nav li") or "#tabs-nav li img", etc. The number of elements in your controlNav should match the number of slides/tabs.
-    sync: "",                       //{NEW} Selector: Mirror the actions performed on this slider with another slider. Use with care.
-    asNavFor: "",                   //{NEW} Selector: Internal property exposed for turning the slider into a thumbnail navigation for another slider
+    sync: "",                       //{NEW} Selector: Mirror the actions performed on this slideshow with another slideshow. Use with care.
+    asNavFor: "",                   //{NEW} Selector: Internal property exposed for turning the slideshow into a thumbnail navigation for another slideshow
 
     // Carousel Options
     itemWidth: 0,                   //{NEW} Integer: Box-model width of individual carousel items, including horizontal borders and padding.
     itemMargin: 0,                  //{NEW} Integer: Margin between carousel items.
     minItems: 1,                    //{NEW} Integer: Minimum number of carousel items that should be visible. Items will resize fluidly when below this.
     maxItems: 0,                    //{NEW} Integer: Maxmimum number of carousel items that should be visible. Items will resize fluidly when above this limit.
-    move: 0,                        //{NEW} Integer: Number of carousel items that should move on animation. If 0, slider will move all visible items.
-    allowOneSlide: true,           //{NEW} Boolean: Whether or not to allow a slider comprised of a single slide
+    move: 0,                        //{NEW} Integer: Number of carousel items that should move on animation. If 0, slideshow will move all visible items.
+    allowOneSlide: true,           //{NEW} Boolean: Whether or not to allow a slideshow comprised of a single slide
 
     // Callback API
-    start: function(){},            //Callback: function(slider) - Fires when the slider loads the first slide
-    before: function(){},           //Callback: function(slider) - Fires asynchronously with each slider animation
-    after: function(){},            //Callback: function(slider) - Fires after each slider animation completes
-    end: function(){},              //Callback: function(slider) - Fires when the slider reaches the last slide (asynchronous)
-    added: function(){},            //{NEW} Callback: function(slider) - Fires after a slide is added
-    removed: function(){},           //{NEW} Callback: function(slider) - Fires after a slide is removed
-    init: function() {}             //{NEW} Callback: function(slider) - Fires after the slider is initially setup
+    start: function(){},            //Callback: function(slideshow) - Fires when the slideshow loads the first slide
+    before: function(){},           //Callback: function(slideshow) - Fires asynchronously with each slideshow animation
+    after: function(){},            //Callback: function(slideshow) - Fires after each slideshow animation completes
+    end: function(){},              //Callback: function(slideshow) - Fires when the slideshow reaches the last slide (asynchronous)
+    added: function(){},            //{NEW} Callback: function(slideshow) - Fires after a slide is added
+    removed: function(){},           //{NEW} Callback: function(slideshow) - Fires after a slide is removed
+    init: function() {}             //{NEW} Callback: function(slideshow) - Fires after the slideshow is initially setup
   };
 
   //FlexSlider: Plugin Function
@@ -1125,7 +1125,7 @@
         }
       });
     } else {
-      // Helper strings to quickly perform functions on the slider
+      // Helper strings to quickly perform functions on the slideshow
       var $slider = $(this).data('flexslider');
       switch (options) {
         case "play": $slider.play(); break;

@@ -36,11 +36,11 @@
         transition-delay: 1s;
         }
 /* 
-   The tooltip body - as we position it above the slider and position the tooltip arrow
+   The tooltip body - as we position it above the slideshow and position the tooltip arrow
    below it, we need to know the height of the body. This means that multi-line tooltips
    are not supported.
    
-   To support multi-line tooltips, you will need to position the tooltip below the slider 
+   To support multi-line tooltips, you will need to position the tooltip below the slideshow
    and the tooltip pointer above the tooltip body. Additionally, you will have to set the
    tooltip bodies "height" to auto
 */

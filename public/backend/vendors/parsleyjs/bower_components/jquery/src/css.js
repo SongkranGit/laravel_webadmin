@@ -203,7 +203,7 @@ function showHide( elements, show ) {
 jQuery.extend({
 
 	// Add in style property hooks for overriding the default
-	// behavior of getting and setting a style property
+	// behavior of getting and Setting a style property
 	cssHooks: {
 		opacity: {
 			get: function( elem, computed ) {

@@ -129,13 +129,13 @@
     var single_html =
         '<span class="irs-bar-edge"></span>' +
         '<span class="irs-shadow shadow-single"></span>' +
-        '<span class="irs-slider single"></span>';
+        '<span class="irs-slideshow single"></span>';
 
     var double_html =
         '<span class="irs-shadow shadow-from"></span>' +
         '<span class="irs-shadow shadow-to"></span>' +
-        '<span class="irs-slider from"></span>' +
-        '<span class="irs-slider to"></span>';
+        '<span class="irs-slideshow from"></span>' +
+        '<span class="irs-slideshow to"></span>';
 
     var disable_html =
         '<span class="irs-disable-mask"></span>';
@@ -149,7 +149,7 @@
      * Main plugin constructor
      *
      * @param input {Object} link to base input element
-     * @param options {Object} slider config
+     * @param options {Object} slideshow config
      * @param plugin_count {Number}
      * @constructor
      */
@@ -485,7 +485,7 @@
         },
 
         /**
-         * Appends slider template to a DOM
+         * Appends slideshow template to a DOM
          */
         append: function () {
             var container_html = '<span class="irs js-irs-' + this.plugin_count + '"></span>';
@@ -546,7 +546,7 @@
 
         /**
          * Determine which handler has a priority
-         * works only for double slider type
+         * works only for double slideshow type
          */
         setTopHandler: function () {
             var min = this.options.min,
@@ -594,7 +594,7 @@
         },
 
         /**
-         * Then slider is disabled
+         * Then slideshow is disabled
          * appends extra layer with opacity
          */
         appendDisableMask: function () {
@@ -603,7 +603,7 @@
         },
 
         /**
-         * Remove slider instance
+         * Remove slideshow instance
          * and ubind all events
          */
         remove: function () {
@@ -633,7 +633,7 @@
         },
 
         /**
-         * bind all slider events
+         * bind all slideshow events
          */
         bindEvents: function () {
             if (this.no_diapason) {
@@ -794,7 +794,7 @@
 
         /**
          * Mousedown or touchstart
-         * for other slider elements, like diapason line
+         * for other slideshow elements, like diapason line
          *
          * @param target {String}
          * @param e {Object} event object
@@ -820,7 +820,7 @@
         },
 
         /**
-         * Keyborard controls for focused slider
+         * Keyborard controls for focused slideshow
          *
          * @param target {String}
          * @param e {Object} event object

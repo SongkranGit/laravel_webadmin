@@ -25,16 +25,14 @@
                     <input type="password" name="password" required  >
                 </div>
                 @if ($errors->has('password'))
-                    <span class="help-block"><strong>{{ $errors->first('password') }}</strong></span>
+                    <span class="help-block "><strong>{{ $errors->first('password') }}</strong></span>
                 @endif
                 <div class="form-group pull-right">
                     <button type="submit" class="fbut">Login</button>
                 </div>
 
             </form>
-
         </div>
-
     </div>
 
 @endsection

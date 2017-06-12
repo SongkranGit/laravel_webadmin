@@ -12,7 +12,7 @@ define(function(require) {
      * Operate single axis.
      * One axis can only operated by one axis operator.
      * Different dataZoomModels may be defined to operate the same axis.
-     * (i.e. 'inside' data zoom and 'slider' data zoom components)
+     * (i.e. 'inside' data zoom and 'slideshow' data zoom components)
      * So dataZoomModels share one axisProxy in that case.
      *
      * @class
@@ -166,7 +166,7 @@ define(function(require) {
             this._valueWindow = dataWindow.valueWindow;
             this._percentWindow = dataWindow.percentWindow;
 
-            // Update axis setting then.
+            // Update axis Setting then.
             setAxisModel(this);
         },
 

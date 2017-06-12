@@ -388,7 +388,7 @@ describe('Line controller tests', function() {
 		expect(point._model.borderWidth).toBe(2.1);
 		expect(point._model.radius).toBe(3.3);
 
-		// Use the consistent name "pointRadius", setting but overwriting
+		// Use the consistent name "pointRadius", Setting but overwriting
 		// another value in "radius"
 		chart.data.datasets[0].pointRadius = 250;
 		chart.data.datasets[0].radius = 20;

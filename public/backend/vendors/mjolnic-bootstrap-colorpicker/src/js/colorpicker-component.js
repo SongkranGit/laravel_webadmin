@@ -442,7 +442,7 @@ Colorpicker.prototype = {
       this.color = new Color(this.input.val(), this.options.colorSelectors);
       // Change format dynamically
       // Only occurs if user choose the dynamic format by
-      // setting option format to false
+      // Setting option format to false
       if (this.color.origFormat && this.options.format === false) {
         this.format = this.color.origFormat;
       }

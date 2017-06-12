@@ -2,11 +2,17 @@
 
 namespace App\Http\Controllers\frontend;
 
+use App\Http\Controllers\FrontendBaseController;
+use App\Repositories\ISettingRepository;
 use Illuminate\Http\Request;
-use App\Http\Controllers\Controller;
 
-class OurServiceController extends Controller
+class OurServiceController extends FrontendBaseController
 {
+    function __construct(ISettingRepository $settingRepository)
+    {
+        parent::__construct($settingRepository);
+    }
+
     /**
      * Display a listing of the resource.
      *

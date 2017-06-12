@@ -6,7 +6,7 @@
             <div class="x_panel">
                 <div class="x_title">
                     <h2>รายการโปรโมชั่น</h2>
-                    <div class="navbar-right"><a href="{{url('admin/promotion/create')}}" class="btn btn-success btn-sm"><i class="fa fa-plus"></i> <strong>เพิ่มโปรโมชั่น</strong>
+                    <div class="navbar-right"><a href="{{url('admin/promotion/create')}}" class="btn btn-primary"><i class="fa fa-plus"></i> <strong>เพิ่มโปรโมชั่น</strong>
                         </a>
                     </div>
                     <div class="clearfix"></div>

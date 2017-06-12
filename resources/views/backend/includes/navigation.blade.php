@@ -16,7 +16,7 @@
                     <li><a href="{{url('admin/logout')}}"><i class="fa fa-sign-out pull-right"></i> Log Out</a></li>
                 </ul>
             </li>
-            <li><a href="{{url( 'home')}}" ><i class="fa fa-home"></i> เว็บไซด์</a></li>
+            <li><a href="{{url( 'home')}}" target="_blank" ><i class="fa fa-home"></i> เว็บไซด์</a></li>
         </ul>
     </nav>
 </div>

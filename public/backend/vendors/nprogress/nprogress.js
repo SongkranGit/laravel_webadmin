@@ -213,7 +213,7 @@
 
   /**
    * (Internal) renders the progress bar markup based on the `template`
-   * setting.
+   * Setting.
    */
 
   NProgress.render = function(fromStart) {
@@ -359,7 +359,7 @@
    * css method.
    *
    * While this helper does assist with vendor prefixed property names, it 
-   * does not perform any manipulation of values prior to setting styles.
+   * does not perform any manipulation of values prior to Setting styles.
    */
 
   var css = (function() {

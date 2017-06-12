@@ -11,7 +11,7 @@ var fdSlider = (function() {
             uniqueid          = 0,
             mouseWheelEnabled = true,            
             fullARIA          = true,
-            describedBy       = "fd-slider-describedby",
+            describedBy       = "fd-slideshow-describedby",
             varSetRules       = {
                 onfocus:true,
                 onvalue:true
@@ -133,13 +133,13 @@ var fdSlider = (function() {
                 return obj;
         };
         
-        // Sets the valueSet variable for a specific slider
+        // Sets the valueSet variable for a specific slideshow
         var setValueSet = function(sliderId, tf) {                 
                 if(!(sliderId in sliders)) return;
                 sliders[sliderId].setValueSet(!!tf);             
         };
                                                              
-        // Javascript instantiation of a slider (input type="text" or select list)       
+        // Javascript instantiation of a slideshow (input type="text" or select list)
         var createSlider = function(options) {
                 if(!options || !options.inp || !options.inp.tagName || options.inp.tagName.search(/^input|select/i) == -1) { return false; };                
                 
@@ -199,27 +199,27 @@ var fdSlider = (function() {
                            )) {
                            
                                 // Skip elements that have already been created are are resident in the DOM
-                                if(inp.id && document.getElementById("fd-slider-"+inp.id)) { 
+                                if(inp.id && document.getElementById("fd-slideshow-"+inp.id)) {
                                         continue;                                                                
                                 // Destroy elements that have already been created but not resident in the DOM
-                                } else if(inp.id && !document.getElementById("fd-slider-"+inp.id)) {
+                                } else if(inp.id && !document.getElementById("fd-slideshow-"+inp.id)) {
                                         destroySingleSlider(inp.id);
                                 };
                                 
                                 // Create an id for the form element if necessary
-                                if(!inp.id) { inp.id = "fd-slider-form-elem-" + uniqueid++; };                      
+                                if(!inp.id) { inp.id = "fd-slideshow-form-elem-" + uniqueid++; };
                                                                 
                                 // Basic option Object        
                                 options = {
                                         inp:            inp,                                                               
                                         callbacks:      [],                                         
                                         animation:      html5Animation,                                        
-                                        vertical:       getAttribute(inp, "data-fd-slider-vertical") ? true : !!(inp.offsetHeight > inp.offsetWidth),
-                                        classNames:     getAttribute(inp, "data-fd-slider-vertical"),
+                                        vertical:       getAttribute(inp, "data-fd-slideshow-vertical") ? true : !!(inp.offsetHeight > inp.offsetWidth),
+                                        classNames:     getAttribute(inp, "data-fd-slideshow-vertical"),
                                         html5Shim:      true
                                 };
                                 
-                                if(options.vertical && !getAttribute(inp, "data-fd-slider-vertical")) {
+                                if(options.vertical && !getAttribute(inp, "data-fd-slideshow-vertical")) {
                                         options.inpHeight = inp.offsetHeight;
                                 };
                                                                                                                       
@@ -322,7 +322,7 @@ var fdSlider = (function() {
                         scale[100] = max;
                 };
                 
-                // Set the "userSet" variable programmatically for this slider
+                // Set the "userSet" variable programmatically for this slideshow
                 function valueSet(tf) {
                         tf = !!tf;
                         if(tf != userSet) {
@@ -361,10 +361,10 @@ var fdSlider = (function() {
                         } catch(err) {};
                         
                         clearTimeout(timer);
-                        removeClass(outerWrapper, "fd-slider-focused");
-                        removeClass(outerWrapper, "fd-slider-active");
+                        removeClass(outerWrapper, "fd-slideshow-focused");
+                        removeClass(outerWrapper, "fd-slideshow-active");
                         
-                        addClass(outerWrapper, "fd-slider-disabled");
+                        addClass(outerWrapper, "fd-slideshow-disabled");
                         outerWrapper.setAttribute("aria-disabled", true);                        
                         inp.disabled = disabled = true;
                         
@@ -391,7 +391,7 @@ var fdSlider = (function() {
                         addEvent(outerWrapper, "mouseover",  onMouseOver);
                         addEvent(outerWrapper, "mouseout",   onMouseOut);
                                                                                                                                        
-                        removeClass(outerWrapper, "fd-slider-disabled");
+                        removeClass(outerWrapper, "fd-slideshow-disabled");
                         outerWrapper.setAttribute("aria-disabled", false);                         
                         inp.disabled = disabled = touchEvents = false;                          
                         
@@ -400,7 +400,7 @@ var fdSlider = (function() {
                         };
                 };
                 
-                // Destroys a slider
+                // Destroys a slideshow
                 function destroySlider() {                        
                         // Clear any timeouts
                         clearTimeout(timer);
@@ -469,7 +469,7 @@ var fdSlider = (function() {
 
                 // FOCUS & BLUR events
                 function onFocus(e) {
-                        addClass(outerWrapper, 'fd-slider-focused');
+                        addClass(outerWrapper, 'fd-slideshow-focused');
                         
                         // Is the value said to have been set by the user onfocus
                         if(varSetRules.onfocus) { 
@@ -490,7 +490,7 @@ var fdSlider = (function() {
                 };
                 
                 function onBlur(e) {                          
-                        removeClass(outerWrapper, 'fd-slider-focused');
+                        removeClass(outerWrapper, 'fd-slideshow-focused');
                         
                         // Remove mousewheel events if necessary
                         if(mouseWheelEnabled) {
@@ -578,18 +578,18 @@ var fdSlider = (function() {
                     
                 // MOUSE & TOUCH events  
                 
-                // Mouseover the slider          
+                // Mouseover the slideshow
                 function onMouseOver(e) {                        
-                        addClass(outerWrapper, 'fd-slider-hover');
+                        addClass(outerWrapper, 'fd-slideshow-hover');
                 };  
                 
-                // Mouseout of the slider              
+                // Mouseout of the slideshow
                 function onMouseOut(e) {
-                        // Should really check we are not still in the slider
-                        removeClass(outerWrapper, 'fd-slider-hover');
+                        // Should really check we are not still in the slideshow
+                        removeClass(outerWrapper, 'fd-slideshow-hover');
                 };
                 
-                // Mousedown on the slider 
+                // Mousedown on the slideshow
                 function onMouseDown(e) {
                         e = e || window.event;
                         
@@ -624,7 +624,7 @@ var fdSlider = (function() {
                         userSet   = true;                                      
                                       
                         // Handle mousedown - initiate drag
-                        if(targ.className.search("fd-slider-handle") != -1) {                                
+                        if(targ.className.search("fd-slideshow-handle") != -1) {
                                 mousePos  = vertical ? e.clientY : e.clientX;
                                 handlePos = parseInt(vertical ? handle.offsetTop : handle.offsetLeft)||0;                        
                                 
@@ -641,8 +641,8 @@ var fdSlider = (function() {
                                         removeEvent(outerWrapper, "mousedown", onMouseDown);                     
                                 };                                
                                       
-                                addClass(outerWrapper, 'fd-slider-active');                        
-                                addClass(document.body, "fd-slider-drag-" + (vertical ? "vertical" : "horizontal"));
+                                addClass(outerWrapper, 'fd-slideshow-active');
+                                addClass(document.body, "fd-slideshow-drag-" + (vertical ? "vertical" : "horizontal"));
                                 
                         // Wrapper mousedown - initiate animation to click point
                         } else {                        
@@ -669,11 +669,11 @@ var fdSlider = (function() {
                                                          
                                 // Tween animation to click point
                                 if(animation == "tween") {
-                                        addClass(outerWrapper, 'fd-slider-active');
+                                        addClass(outerWrapper, 'fd-slideshow-active');
                                         tweenTo(posx);                                                                                     
                                 // Progressive increment to click point    
                                 } else if(animation == "timed") {  
-                                        addClass(outerWrapper, 'fd-slider-active');     
+                                        addClass(outerWrapper, 'fd-slideshow-active');
                                         addEvent(document, touchEvents ? 'touchend' : 'mouseup', onDocMouseUp);                                                                                 
                                         destPos = posx;
                                         onTimer();
@@ -693,7 +693,7 @@ var fdSlider = (function() {
                         
                         preventDefault(e);                        
                         removeEvent(document, touchEvents ? 'touchend' : 'mouseup', onDocMouseUp);
-                        removeClass(outerWrapper, "fd-slider-active");
+                        removeClass(outerWrapper, "fd-slideshow-active");
                         
                         clearTimeout(timer);
                         timer     = null;
@@ -717,8 +717,8 @@ var fdSlider = (function() {
                         };
                         
                         kbEnabled   = true;                        
-                        removeClass(document.body, "fd-slider-drag-" + (vertical ? "vertical" : "horizontal"));                        
-                        removeClass(outerWrapper, "fd-slider-active");
+                        removeClass(document.body, "fd-slideshow-drag-" + (vertical ? "vertical" : "horizontal"));
+                        removeClass(outerWrapper, "fd-slideshow-active");
                               
                         return stopEvent(e);
                 }; 
@@ -742,7 +742,7 @@ var fdSlider = (function() {
                         return false;                                         
                 };
                 
-                // Increments the slider by "inc" steps
+                // Increments the slideshow by "inc" steps
                 function increment(inc) {                                       
                         var value = getWorkingValueFromInput();                                              
                         userSet   = true;                                                  
@@ -750,7 +750,7 @@ var fdSlider = (function() {
                         valueToPixels(getValidValue(value));  
                 };
                 
-                // Attempts to locate the on-screen position of the slider
+                // Attempts to locate the on-screen position of the slideshow
                 function locate(){
                         var curleft = 0,
                             curtop  = 0,
@@ -777,7 +777,7 @@ var fdSlider = (function() {
                         if(xtmp != destPos) timer = setTimeout(onTimer, steps > 20 ? 50 : 100);
                         else {
                                 kbEnabled = true;
-                                removeClass(outerWrapper, "fd-slider-active");  
+                                removeClass(outerWrapper, "fd-slideshow-active");
                                 
                                 callback("finalise");
                         };
@@ -802,8 +802,8 @@ var fdSlider = (function() {
                                 timer     = null;
                                 kbEnabled = true;
                                                                 
-                                removeClass(outerWrapper, "fd-slider-focused"); 
-                                removeClass(outerWrapper, "fd-slider-active");  
+                                removeClass(outerWrapper, "fd-slideshow-focused");
+                                removeClass(outerWrapper, "fd-slideshow-active");
                                 
                                 // Call the "finalise" callback whenever the animation is complete
                                 callback("finalise");
@@ -847,7 +847,7 @@ var fdSlider = (function() {
                         return (isNaN(value) || value === "" || typeof value == "undefined") ? defaultVal : Math.min(Math.max(value, Math.min(rMin,rMax)), Math.max(rMin,rMax));             
                 };
                 
-                // Calculates value according to pixel position of slider handle
+                // Calculates value according to pixel position of slideshow handle
                 function pixelsToValue(px) {                                                                                            
                         var val = getValidValue(scale ? percentToValue(pixelsToPercent(px)) : vertical ? max - (Math.round(px / stepPx) * step) : min + (Math.round(px / stepPx) * step));                                                                                                                                                                         
                         
@@ -875,7 +875,7 @@ var fdSlider = (function() {
                         setInputValue(clearVal ? "" : value);                                                                                                                                                                       
                 };
 
-                // Rounds a pixel value to the nearest "snap" point on the slider scale
+                // Rounds a pixel value to the nearest "snap" point on the slideshow scale
                 function snapToPxValue(px) {                             
                         if(scale) {                                
                                 return Math.max(Math.min(rMaxPx, px), rMinPx);                        
@@ -948,11 +948,11 @@ var fdSlider = (function() {
                         callback("update");
                                                                                                     
                         // If the user has not set this value or has entered an incorrect value then set a class
-                        // to enable styling of the slider
+                        // to enable styling of the slideshow
                         if(!userSet) {                                
-                                addClass(outerWrapper, "fd-slider-no-value");
+                                addClass(outerWrapper, "fd-slideshow-no-value");
                         } else {
-                                removeClass(outerWrapper, "fd-slider-no-value");
+                                removeClass(outerWrapper, "fd-slideshow-no-value");
                         };
                         
                         if(tagName == "select") {
@@ -1059,22 +1059,22 @@ var fdSlider = (function() {
                         };
                         
                         outerWrapper              = document.createElement('span');
-                        outerWrapper.className    = "fd-slider" + (vertical ? "-vertical " : " ") + (!html5Shim ? " fd-slider-no-value " : "") + classNames;
-                        outerWrapper.id           = "fd-slider-" + inp.id;
+                        outerWrapper.className    = "fd-slideshow" + (vertical ? "-vertical " : " ") + (!html5Shim ? " fd-slideshow-no-value " : "") + classNames;
+                        outerWrapper.id           = "fd-slideshow-" + inp.id;
                         
                         if(vertical && inpHeight) {
                                 outerWrapper.style.height = inpHeight + "px";  
                         };
                         
                         wrapper                   = document.createElement('span');
-                        wrapper.className         = "fd-slider-inner";
+                        wrapper.className         = "fd-slideshow-inner";
 
                         bar                       = document.createElement('span');
-                        bar.className             = "fd-slider-bar";
+                        bar.className             = "fd-slideshow-bar";
                         
                         if(!noRangeBar) {
                                 rangeBar                  = document.createElement('span');
-                                rangeBar.className        = "fd-slider-range";
+                                rangeBar.className        = "fd-slideshow-range";
                         };
                         
                         if(fullARIA) {
@@ -1085,7 +1085,7 @@ var fdSlider = (function() {
                                 handle.setAttribute("href", "#");
                         };
                         
-                        handle.className          = "fd-slider-handle";                        
+                        handle.className          = "fd-slideshow-handle";
                         handle.appendChild(document.createTextNode(String.fromCharCode(160)));                         
                         
                         outerWrapper.appendChild(wrapper);
@@ -1116,7 +1116,7 @@ var fdSlider = (function() {
                         var lbl = findLabel();
                         if(lbl) {                                 
                                 handle.setAttribute("aria-labelledby", lbl.id);
-                                handle.id = "fd-slider-handle-" + inp.id;
+                                handle.id = "fd-slideshow-handle-" + inp.id;
                                 /*@cc_on
                                 /*@if(@_win32)
                                 lbl.setAttribute("htmlFor", handle.id);

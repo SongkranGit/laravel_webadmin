@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Auth;
  * Date: 5/16/2017
  * Time: 10:08 AM
  */
-class UserRepository extends BaseRepository implements IUserRepository
+class UserRepository extends AbstractRepository implements IUserRepository
 {
 
     function __construct( User $user)

@@ -6501,7 +6501,7 @@ jQuery.extend({
   },
 
   // Add in properties whose names you wish to fix before
-  // setting or getting the value
+  // Setting or getting the value
   cssProps: {
     // normalize float css property
     "float": jQuery.support.cssFloat ? "cssFloat" : "styleFloat"
@@ -8622,7 +8622,7 @@ jQuery.extend({
 });
 
 jQuery.fx.prototype = {
-  // Simple function for setting a style value
+  // Simple function for Setting a style value
   update: function() {
     if ( this.options.step ) {
       this.options.step.call( this.elem, this.now, this );

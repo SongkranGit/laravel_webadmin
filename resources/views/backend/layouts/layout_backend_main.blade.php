@@ -9,7 +9,7 @@
         <div class="col-md-3 left_col">
             <div class="left_col scroll-view">
                 <div class="navbar nav_title" style="border: 0;">
-                    <a href="index.html" class="site_title"><i class="fa fa-home"></i> <span> {{ config('app.site_name') }}</span></a>
+                    <a href="{{url('home')}}" class="site_title"><i class="fa fa-home"></i> <span> {{ config('app.site_name') }}</span></a>
                 </div>
 
                 <div class="clearfix"></div>
@@ -86,6 +86,7 @@
 <!-- Bootstrap Dialog  -->
 <script src="{{asset("backend/vendors/bootstrap-dialog/js/bootstrap-dialog.min.js")}}"></script>
 <!-- validator -->
+<script src="{{asset("backend/vendors/tinymce/tinymce.min.js")}}"></script>
 {{--<script src="{{asset('vendors/jquery.validate/jquery.validate.min.js')}}"></script>--}}
 <script src="{{asset('backend/js/validator.min.js')}}"></script>
 

@@ -8,14 +8,14 @@
 .fd-slider
         {
         width:100%;
-        /* The height of the slider handle */
+        /* The height of the slideshow handle */
         height:20px;
         margin:0;
         }
 /* Vertical Outer wrapper - all other DOM elements added as children to this top level wrapper */
 .fd-slider-vertical
         {
-        /* The width of the slider handle */
+        /* The width of the slideshow handle */
         width:20px;
         /* Fill the available space */
         height:100%;

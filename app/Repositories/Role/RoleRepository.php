@@ -11,7 +11,7 @@ namespace App\Repositories;
 use App\Role;
 use App\Repositories\IRoleRepository as IRoleRepository;
 
-class RoleRepository extends BaseRepository implements IRoleRepository
+class RoleRepository extends AbstractRepository implements IRoleRepository
 {
 
     function __construct( Role $role)

@@ -1,13 +1,11 @@
 <?php $active_menu = Request::segment(1);?>
 
-
-
 <div class="top_section3">
     <div class="container">
         <div class="left">
             <!-- Logo -->
             <div>
-                <a href="index.html" id="logo23">{{config('app.site_name')}}</a>
+                <a href="index.html" id="logo_company">{{config('app.site_name')}}</a>
             </div>
 
         </div><!-- end left -->
@@ -17,7 +15,7 @@
             <ul class="tinfo last">
                 <li><i class="fa fa-phone"></i></li>
                 <li><em>Call Us</em>
-                    <strong>+1 123-456-789000</strong></li>
+                    <strong>{{$website_info->phone}}</strong></li>
             </ul>
         </div><!-- end right -->
 

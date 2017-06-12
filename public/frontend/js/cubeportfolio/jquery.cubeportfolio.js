@@ -882,10 +882,10 @@
             t.wrap.addClass('cbp-popup-ready');
             t.wrap.removeClass('cbp-popup-loading');
 
-            // instantiate slider if exists
-            selectorSlider = t.content.find('.cbp-slider');
+            // instantiate slideshow if exists
+            selectorSlider = t.content.find('.cbp-slideshow');
             if (selectorSlider) {
-                selectorSlider.find('.cbp-slider-item').addClass('cbp-item');
+                selectorSlider.find('.cbp-slideshow-item').addClass('cbp-item');
                 t.slider = selectorSlider.cubeportfolio({
                     layoutMode: 'slider',
                     mediaQueries: [{
@@ -936,10 +936,10 @@
             // wait to load all images
             t.cubeportfolio._load(t.wrap, function() {
 
-                // instantiate slider if exists
-                var selectorSlider = t.content.find('.cbp-slider');
+                // instantiate slideshow if exists
+                var selectorSlider = t.content.find('.cbp-slideshow');
                 if (selectorSlider) {
-                    selectorSlider.find('.cbp-slider-item').addClass('cbp-item');
+                    selectorSlider.find('.cbp-slideshow-item').addClass('cbp-item');
                     t.slider = selectorSlider.cubeportfolio({
                         layoutMode: 'slider',
                         displayType: 'default',
@@ -2218,7 +2218,7 @@
 
             t.sliderActive = 0;
 
-            t.$obj.addClass('cbp-mode-slider');
+            t.$obj.addClass('cbp-mode-slideshow');
 
             t.$ul.wrap('<div class="cbp-wrapper-outer"></div>');
 
@@ -2226,7 +2226,7 @@
                 'class': 'cbp-nav'
             });
 
-            t.nav.on('click' + eventNamespace, '[data-slider-action]', function(e) {
+            t.nav.on('click' + eventNamespace, '[data-slideshow-action]', function(e) {
                 e.preventDefault();
                 e.stopImmediatePropagation();
                 e.stopPropagation();
@@ -2485,7 +2485,7 @@
                 method;
 
             if (t.options.showNavigation) {
-                // if slider loop is enabled don't add classes to `next` and `prev` buttons
+                // if slideshow loop is enabled don't add classes to `next` and `prev` buttons
                 if (!t.options.rewindNav) {
                     method = (t._isStartSlider()) ? 'addClass' : 'removeClass';
                     t.navPrev[method]('cbp-nav-stop');
@@ -2516,7 +2516,7 @@
         },
 
         /**
-         * Arrange the items in a slider layout
+         * Arrange the items in a slideshow layout
          */
         _sliderLayout: function() {
             var t = this;
@@ -2619,11 +2619,11 @@
                 $document.on(events.move, dragMove);
                 $document.on(events.end, dragEnd);
 
-                t.$obj.addClass('cbp-mode-slider-dragStart');
+                t.$obj.addClass('cbp-mode-slideshow-dragStart');
             }
 
             function dragEnd(e) {
-                t.$obj.removeClass('cbp-mode-slider-dragStart');
+                t.$obj.removeClass('cbp-mode-slideshow-dragStart');
 
                 // put the state to animate
                 isAnimating = true;
@@ -2695,7 +2695,7 @@
 
 
         /**
-         * Reset the slider layout
+         * Reset the slideshow layout
          */
         _sliderLayoutReset: function() {
             var t = this;
@@ -4859,20 +4859,20 @@
 
         /**
          *  Layout Mode for this plugin
-         *  Values: 'grid' or 'slider'
+         *  Values: 'grid' or 'slideshow'
          */
         layoutMode: 'grid',
 
         /**
          *  Mouse and touch drag support
-         *  Option available only for `layoutMode: 'slider'`
+         *  Option available only for `layoutMode: 'slideshow'`
          *  Values: true or false
          */
         drag: true,
 
         /**
-         *  Autoplay the slider
-         *  Option available only for `layoutMode: 'slider'`
+         *  Autoplay the slideshow
+         *  Option available only for `layoutMode: 'slideshow'`
          *  Values: true or false
          */
         auto: false,
@@ -4880,42 +4880,42 @@
         /**
          *  Autoplay interval timeout. Time is set in milisecconds
          *  1000 milliseconds equals 1 second.
-         *  Option available only for `layoutMode: 'slider'`
+         *  Option available only for `layoutMode: 'slideshow'`
          *  Values: only integers (ex: 1000, 2000, 5000)
          */
         autoTimeout: 5000,
 
         /**
-         *  Stops autoplay when user hover the slider
-         *  Option available only for `layoutMode: 'slider'`
+         *  Stops autoplay when user hover the slideshow
+         *  Option available only for `layoutMode: 'slideshow'`
          *  Values: true or false
          */
         autoPauseOnHover: true,
 
         /**
-         *  Show `next` and `prev` buttons for slider
-         *  Option available only for `layoutMode: 'slider'`
+         *  Show `next` and `prev` buttons for slideshow
+         *  Option available only for `layoutMode: 'slideshow'`
          *  Values: true or false
          */
         showNavigation: true,
 
         /**
-         *  Show pagination for slider
-         *  Option available only for `layoutMode: 'slider'`
+         *  Show pagination for slideshow
+         *  Option available only for `layoutMode: 'slideshow'`
          *  Values: true or false
          */
         showPagination: true,
 
         /**
          *  Enable slide to first item (last item)
-         *  Option available only for `layoutMode: 'slider'`
+         *  Option available only for `layoutMode: 'slideshow'`
          *  Values: true or false
          */
         rewindNav: true,
 
         /**
          *  Scroll by page and not by item. This option affect next/prev buttons and drag support
-         *  Option available only for `layoutMode: 'slider'`
+         *  Option available only for `layoutMode: 'slideshow'`
          *  Values: true or false
          */
         scrollByPage: false,

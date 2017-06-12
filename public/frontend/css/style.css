@@ -456,6 +456,17 @@
 	background:url(../images/logo23.png) no-repeat left top;
 }
 
+#logo_company {
+	float:left;
+	display:block;
+	width:95%;
+	min-height: 50px;
+	margin-top:14px;
+	position: relative;
+	text-indent:-999em;
+	background:url(../images/logo_company.png) no-repeat left top;
+}
+
 
 
 /* header area adinationals */

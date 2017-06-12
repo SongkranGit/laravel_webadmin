@@ -523,7 +523,7 @@ FastClick.prototype.onTouchEnd = function(event) {
   if (deviceIsIOSWithBadTarget) {
     touch = event.changedTouches[0];
 
-    // In certain cases arguments of elementFromPoint can be negative, so prevent setting targetElement to null
+    // In certain cases arguments of elementFromPoint can be negative, so prevent Setting targetElement to null
     targetElement = document.elementFromPoint(touch.pageX - window.pageXOffset, touch.pageY - window.pageYOffset) || targetElement;
     targetElement.fastClickScrollParent = this.targetElement.fastClickScrollParent;
   }

@@ -2807,12 +2807,12 @@ window.averta = {};
 
 			if ( origin ) {
 				if ( origin.charAt(0) === 'b' ){
-					osy = this.slide.slider.options.height - this.$element.data('offset-y');
+					osy = this.slide.slideshow.options.height - this.$element.data('offset-y');
 					this.$element.data('offset-y',  osy);
 				}
 
 				if ( origin.charAt(1) === 'r' ){
-					osx = this.slide.slider.options.width - this.$element.data('offset-x');
+					osx = this.slide.slideshow.options.width - this.$element.data('offset-x');
 					this.$element.data('offset-x', osx);
 				}
 
@@ -3974,7 +3974,7 @@ MSSliderEvent.DESTROY				= 'ms_destroy';
 		
 		if(!this.so.fullwidth){ 
 			this.width = Math.min(this.width , this.so.width);
-			//this.view.$element.css('left' , (this.slider.$element[0].clientWidth - this.width) / 2 + 'px');
+			//this.view.$element.css('left' , (this.slideshow.$element[0].clientWidth - this.width) / 2 + 'px');
 		}
 
 		if( this.so.fullheight ){
@@ -4055,7 +4055,7 @@ MSSliderEvent.DESTROY				= 'ms_destroy';
 		this.created = true;
 		this.paused = !this.so.autoplay;
 
-		//this.slider.$element.append(this.view.$element);
+		//this.slideshow.$element.append(this.view.$element);
 		this.view.addEventListener(MSViewEvents.CHANGE_START , this.onChangeStart , this);
 		this.view.addEventListener(MSViewEvents.CHANGE_END   , this.onChangeEnd   , this);
 		this.view.addEventListener(MSViewEvents.SWIPE_START  , this.onSwipeStart  , this);	
@@ -4128,8 +4128,8 @@ MSSliderEvent.DESTROY				= 'ms_destroy';
 		// 		return false;
 		// 	};
 			
-		// 	if($.browser.mozilla) this.slider.$element[0].addEventListener('DOMMouseScroll' , this.wheellistener);
-		// 	else this.slider.$element.bind('mousewheel', this.wheellistener);
+		// 	if($.browser.mozilla) this.slideshow.$element[0].addEventListener('DOMMouseScroll' , this.wheellistener);
+		// 	else this.slideshow.$element.bind('mousewheel', this.wheellistener);
 		// }
 
 		if(this.slider.$element[0].clientWidth === 0)
@@ -4213,7 +4213,7 @@ MSSliderEvent.DESTROY				= 'ms_destroy';
 	};
 
 	/**
-	 * Scroll window to the bottom of slider
+	 * Scroll window to the bottom of slideshow
 	 * @param {Number} duration animation duration (seconds)
 	 * @since 2.2.0
 	 */
@@ -4288,37 +4288,37 @@ MSSliderEvent.DESTROY				= 'ms_destroy';
 			loop 				: false,	  // Enables the continuous sliding mode.
 			mouse				: true,		  // Whether the user can use mouse drag navigation.
 			swipe				: true,		  // Whether the drag/swipe navigation is enabled.
-			grabCursor			: true,		  // Whether the slider uses grab mouse cursor.
+			grabCursor			: true,		  // Whether the slideshow uses grab mouse cursor.
 			space  				: 0,		  // The spacing value between slides in pixels.
 			fillMode			: 'fill',  	  // Specifies the slide background scaling method. Its acceptable values are "fill", "fit", "stretch", "center" and "tile". 
-			start				: 1,		  // The slider starting slide number.
+			start				: 1,		  // The slideshow starting slide number.
 			view				: 'basic',	  // The slide changing transition. 
-			width				: 300,		  // The base width of slides. It helps the slider to resize in correct ratio.
-			height				: 150,		  // The base height of slides, It helps the slider to resize in correct ratio.
+			width				: 300,		  // The base width of slides. It helps the slideshow to resize in correct ratio.
+			height				: 150,		  // The base height of slides, It helps the slideshow to resize in correct ratio.
 			inView				: 15, 		  // Specifies number of slides which will be added at a same time in DOM.
 			critMargin			: 1,		  // 
 			heightLimit			: true,		  // It force the slide to use max height value as its base specified height value.
-			smoothHeight		: true,		  // Whether the slider uses smooth animation while its height changes.
-			autoHeight			: false,      // Whether the slider adapts its height to each slide height or not. It overrides heightLimit option.
-			fullwidth			: false,	  // It enables the slider to adapt width to its parent element. It's very useful for creating full-width sliders. In default it takes max width as its base width value.
-			fullheight			: false,	  // It enables the slider to adapt height to its parent element.
-			autofill			: false,	  // It enables the slider to adapt width and height to its parent element, It's very useful for creating fullscreen or fullwindow slider.
-			layersMode			: 'center',	  // It accepts two values "center" and "full". The "center" value indicates that the slider aligns layers to the center. This option is only effective in full width mode.
-			hideLayers			: false,	  // Whether the slider hides all layers before changing slide.
-			endPause			: false,	  // Whether the slider pauses slideshow when it stays at the last slide.
-			centerControls 		: true,		  // Whether the slider aligns UI controls to center. This option is only effective in full width mode.
-			overPause			: true,		  // Whether the slider pauses slideshow on hover.
+			smoothHeight		: true,		  // Whether the slideshow uses smooth animation while its height changes.
+			autoHeight			: false,      // Whether the slideshow adapts its height to each slide height or not. It overrides heightLimit option.
+			fullwidth			: false,	  // It enables the slideshow to adapt width to its parent element. It's very useful for creating full-width sliders. In default it takes max width as its base width value.
+			fullheight			: false,	  // It enables the slideshow to adapt height to its parent element.
+			autofill			: false,	  // It enables the slideshow to adapt width and height to its parent element, It's very useful for creating fullscreen or fullwindow slideshow.
+			layersMode			: 'center',	  // It accepts two values "center" and "full". The "center" value indicates that the slideshow aligns layers to the center. This option is only effective in full width mode.
+			hideLayers			: false,	  // Whether the slideshow hides all layers before changing slide.
+			endPause			: false,	  // Whether the slideshow pauses slideshow when it stays at the last slide.
+			centerControls 		: true,		  // Whether the slideshow aligns UI controls to center. This option is only effective in full width mode.
+			overPause			: true,		  // Whether the slideshow pauses slideshow on hover.
 			shuffle				: false,	  // Enables the shuffle slide order.
 			speed				: 17, 		  // Specifies slide changing speed. It accepts float values between 0 and 100.
 			dir					: 'h',		  // Specifies slide changing direction. It accepts two values "h" (horizontal) and "v" (vertical).
-			preload				: 0,		  // Specifies number of slides which will be loaded by slider. 0 value means the slider loads slides in sequence.
-			wheel				: false,	  // Whether slider uses mouse wheel for navigation.
+			preload				: 0,		  // Specifies number of slides which will be loaded by slideshow. 0 value means the slideshow loads slides in sequence.
+			wheel				: false,	  // Whether slideshow uses mouse wheel for navigation.
 			layout				: 'boxed',	  // It accepts 'fullwidth', 'fullscreen', 'fillwidth', 'autofill', 'partialview', 'boxed'. It overrides 'fullwidth' and 'autofill' (added in v1.5.6)
 			fullscreenMargin	: 0,		
 			instantStartLayers	: false, 	  // @since 1.5.0, Whether instantly shows slide layers.
 			parallaxMode 		: 'mouse',	  // @since 1.6.0, Specifies mode of parallax effect accepts: "mouse", "mouse:x-only", "mouse:y-only" and "swipe"
-			rtl 				: false,	  // @since 1.8.0, Whether Right-to-left direction slider.
-			deepLink			: null,       // @since 2.1.0, null value disables slider deep-linking any string values identifies the slider in page's url like /#msslider-1
+			rtl 				: false,	  // @since 1.8.0, Whether Right-to-left direction slideshow.
+			deepLink			: null,       // @since 2.1.0, null value disables slideshow deep-linking any string values identifies the slideshow in page's url like /#msslider-1
 			deepLinkType 		: 'path', 	  // @since 2.1.0, type of hash value in page's url possible values, path and query (  #gallery/1 || #gallery=4 )
 			disablePlugins      : []		  // @since 2.9.6, list of disabled Master Slider plugin names for this instance.
 		};
@@ -4330,7 +4330,7 @@ MSSliderEvent.DESTROY				= 'ms_destroy';
 		// used by new layout method. to force fullwidth or fullscreen
 		this.lastMargin = 0; 
 
-		// Reserved side spaces of slider
+		// Reserved side spaces of slideshow
 		this.leftSpace = 0;
 		this.topSpace = 0;
 		this.rightSpace = 0;
@@ -4468,7 +4468,7 @@ MSSliderEvent.DESTROY				= 'ms_destroy';
 	};
 	
 	/**
-	 * remove slider initialize loading
+	 * remove slideshow initialize loading
 	 * @since 1.0
 	 * @private
 	 */
@@ -4486,7 +4486,7 @@ MSSliderEvent.DESTROY				= 'ms_destroy';
 	};
 	
 	/**
-	 * resize listener, it only used for aligning slider loading and after slider init it will be removed
+	 * resize listener, it only used for aligning slideshow loading and after slideshow init it will be removed
 	 * @param  {Event} e
 	 * @since 1.0
 	 * @private
@@ -4519,7 +4519,7 @@ MSSliderEvent.DESTROY				= 'ms_destroy';
 	};
 
 	/**
-	 * New method of setting up the layout of slider
+	 * New method of setting up the layout of slideshow
 	 * @since 1.5.6 
 	 */
 	p._setupSliderLayout = function(){
@@ -4532,7 +4532,7 @@ MSSliderEvent.DESTROY				= 'ms_destroy';
 
 	
 		if( lo !== 'boxed' && lo !== 'partialview' ){
-			this.options.fullwidth = true;  // enable slider fullscreen for fullwidth, fillwidth, autofill and fullscreen layouts.
+			this.options.fullwidth = true;  // enable slideshow fullscreen for fullwidth, fillwidth, autofill and fullscreen layouts.
 		} 
 		if( lo === 'fullscreen' || lo === 'autofill' ){
 			this.options.fullheight = true;
@@ -4552,7 +4552,7 @@ MSSliderEvent.DESTROY				= 'ms_destroy';
 	};
 
 	/**
-	 * updates layout of slider based on window size
+	 * updates layout of slideshow based on window size
 	 * @param  {Event} event
 	 * @since 1.5.6
 	 */
@@ -4578,8 +4578,8 @@ MSSliderEvent.DESTROY				= 'ms_destroy';
 
 
 	/**
-	 * initialize the slider, called by document ready
-	 * <code>holdOn</code> property prevents auto initialize slider after document ready it used by plugins of slider like Flickr
+	 * initialize the slideshow, called by document ready
+	 * <code>holdOn</code> property prevents auto initialize slideshow after document ready it used by plugins of slideshow like Flickr
 	 * @since 1.0
 	 * @protected
 	 */
@@ -4663,7 +4663,7 @@ MSSliderEvent.DESTROY				= 'ms_destroy';
 	};
 	
 	/**
-	 * changes the height of slider, it used in autoheight slider
+	 * changes the height of slideshow, it used in autoheight slideshow
 	 * @param {Number} value
 	 * @since 1.0
 	 * @public
@@ -4680,7 +4680,7 @@ MSSliderEvent.DESTROY				= 'ms_destroy';
 	};
 	
 	/**
-	 * reserves white space in sides of slider, it used by controls
+	 * reserves white space in sides of slideshow, it used by controls
 	 * @param  {String} side  left|right|top|bottom
 	 * @param  {Number} space 
 	 * @returns {Number} start position in space.
@@ -4726,7 +4726,7 @@ MSSliderEvent.DESTROY				= 'ms_destroy';
 	/*------------------------- Public Methods -----------------------*/
 
 	/**
-	 * Adds new control to the slider
+	 * Adds new control to the slideshow
 	 * @param  {String} control
 	 * @param  {Object} options [description]
 	 * @since 1.0
@@ -4743,7 +4743,7 @@ MSSliderEvent.DESTROY				= 'ms_destroy';
 	};
 
 	/**
-	 * Hold on slider from initialization
+	 * Hold on slideshow from initialization
 	 * @since 2.9.6
 	 * @public
 	 */
@@ -4752,7 +4752,7 @@ MSSliderEvent.DESTROY				= 'ms_destroy';
 	};
 
 	/**
-	 * Let the slider to initialize 
+	 * Let the slideshow to initialize
 	 * @since 2.9.6
 	 */
 	p.release = function () { 
@@ -4761,7 +4761,7 @@ MSSliderEvent.DESTROY				= 'ms_destroy';
 	};
 
 	/**
-	 * setup slider
+	 * setup slideshow
 	 * @param  {String|jQuery object} id
 	 * @param  {Object} options 
 	 * @since 1.0
@@ -4774,7 +4774,7 @@ MSSliderEvent.DESTROY				= 'ms_destroy';
 			this.$element = target.eq(0);
 		}
 
-		//create a copy from slider markup, it will be used in destroy method.
+		//create a copy from slideshow markup, it will be used in destroy method.
 		this.setupMarkup = this.$element.html();
 
 		if( this.$element.length === 0 ){
@@ -4782,7 +4782,7 @@ MSSliderEvent.DESTROY				= 'ms_destroy';
 			return;
 		}
 
-		this.$element.addClass('master-slider').addClass('before-init');
+		this.$element.addClass('master-slideshow').addClass('before-init');
 
 		// IE prefix class
 		// add browser prefix class name
@@ -4847,8 +4847,8 @@ MSSliderEvent.DESTROY				= 'ms_destroy';
 	};
 	
 	/**
-	 * destroy the slider instance 
-	 * @param  {Boolean} insertMarkup	 whether add slider markup after destroy.
+	 * destroy the slideshow instance
+	 * @param  {Boolean} insertMarkup	 whether add slideshow markup after destroy.
 	 * @since 1.4
 	 * @public
 	 */
@@ -4984,7 +4984,7 @@ MSSliderEvent.DESTROY				= 'ms_destroy';
 						returns = instance[options].apply( instance, Array.prototype.slice.call( args, 1 ) );
 					} 
 
-					// Map slider api functions to slider jq plugin
+					// Map slideshow api functions to slideshow jq plugin
 					if ( instance instanceof MasterSliderPlugin && typeof instance._slider.api[options] === 'function' ) {
 						returns = instance._slider.api[options].apply( instance._slider.api, Array.prototype.slice.call( args, 1 ) );
 					}
@@ -6346,7 +6346,7 @@ MSViewEvents.CHANGE_END	     	= 'slideChangeEnd';
 
 	p.checkHideUnder = function(){
 		if(this.options.hideUnder){
-			//this.slider.api.addEventListener(MSSliderEvent.RESIZE, this.onSliderResize, this);
+			//this.slideshow.api.addEventListener(MSSliderEvent.RESIZE, this.onSliderResize, this);
 			this.needsRealign = !this.options.insetTo && (this.options.align === 'left' || this.options.align === 'right') && this.options.inset === false;
 			$(window).bind('resize', {that:this}, this.onResize);
 			this.onResize();
@@ -6355,7 +6355,7 @@ MSViewEvents.CHANGE_END	     	= 'slideChangeEnd';
 	};
 
 	/**
-	 * hide control if width of slider changes to lower that specified value [hideUnder]
+	 * hide control if width of slideshow changes to lower that specified value [hideUnder]
 	 * @since 1.5.7
 	 * @protected
 	 */
@@ -6500,7 +6500,7 @@ MSViewEvents.CHANGE_END	     	= 'slideChangeEnd';
 	p.destroy = function(){
 
 		if(this.options && this.options.hideUnder){
-			//this.slider.api.removeEventListener(MSSliderEvent.RESIZE, this.onResize, this);
+			//this.slideshow.api.removeEventListener(MSSliderEvent.RESIZE, this.onResize, this);
 			$(window).unbind('resize', this.onResize);
 		}
 	};
@@ -6688,7 +6688,7 @@ MSViewEvents.CHANGE_END	     	= 'slideChangeEnd';
 	};
 	
 	/**
-	 * calls by "RESERVED_SPACE_CHANGE" realigns the control in slider
+	 * calls by "RESERVED_SPACE_CHANGE" realigns the control in slideshow
 	 * @since 1.5.7
 	 */
 	p.align = function(event){
@@ -7107,7 +7107,7 @@ MSViewEvents.CHANGE_END	     	= 'slideChangeEnd';
 					.appendTo(this.$element);
 					
 		if(this.slider.options.loop){
-			console.log('WARNING, MSScrollbar cannot work with looped slider.');
+			console.log('WARNING, MSScrollbar cannot work with looped slideshow.');
 			this.disable = true;
 			this.$element.remove();
 		}
@@ -7164,7 +7164,7 @@ MSViewEvents.CHANGE_END	     	= 'slideChangeEnd';
 	};
 
 	/**
-	 * calls by "RESERVED_SPACE_CHGANE" realigns the control in slider
+	 * calls by "RESERVED_SPACE_CHGANE" realigns the control in slideshow
 	 * @since 1.5.7
 	 */
 	p.align = function(event){
@@ -7213,7 +7213,7 @@ MSViewEvents.CHANGE_END	     	= 'slideChangeEnd';
 			
 			var that = this;
 			this.hto = setTimeout(function(){
-				//if(!that.slider.api.view.swipeControl.touchStarted)
+				//if(!that.slideshow.api.view.swipeControl.touchStarted)
 				that.$bar.css('opacity' , '0');
 			} , 150);
 		}
@@ -7334,7 +7334,7 @@ MSViewEvents.CHANGE_END	     	= 'slideChangeEnd';
 	};
 
 	/**
-	 * calls by "RESERVED_SPACE_CHGANE" realigns the control in slider
+	 * calls by "RESERVED_SPACE_CHGANE" realigns the control in slideshow
 	 * @since 1.5.7
 	 */
 	p.align = function(event){
@@ -7444,7 +7444,7 @@ MSViewEvents.CHANGE_END	     	= 'slideChangeEnd';
 		var that = this;
 		$(this).stop(true).animate({prog:this.slider.api._delayProgress * 0.01} ,
 					 	{duration:200 , step:function(){that._draw();}});
-		//this.$bar[0].style.width = this.slider.api._delayProgress/100 * this.$element.width() + 'px';
+		//this.$bar[0].style.width = this.slideshow.api._delayProgress/100 * this.$element.width() + 'px';
 	};
 	
 	p._draw = function(){
@@ -7585,7 +7585,7 @@ MSViewEvents.CHANGE_END	     	= 'slideChangeEnd';
 	};
 
 	/**
-	 * calls by "RESERVED_SPACE_CHGANE" realigns the control in slider
+	 * calls by "RESERVED_SPACE_CHGANE" realigns the control in slideshow
 	 * @since 1.5.7
 	 */
 	p.align = function(event){
@@ -7688,7 +7688,7 @@ MSViewEvents.CHANGE_END	     	= 'slideChangeEnd';
 		this.playbtn  = $('<div></div>').addClass('ms-gal-playbtn').appendTo(this.botcont);
 		this.thumbtoggle  = $('<div></div>').addClass('ms-gal-thumbtoggle').appendTo(this.botcont);
 		
-		// adds required controls to slider
+		// adds required controls to slideshow
 		slider.control('thumblist' , {insertTo:this.thumbcont , autohide:false , dir:'h'});
 		slider.control('slidenum'  , {insertTo:this.botcont , autohide:false});
 		slider.control('slideinfo' , {insertTo:this.botcont , autohide:false});		
@@ -7837,9 +7837,9 @@ MSViewEvents.CHANGE_END	     	= 'slideChangeEnd';
 			
 		this.options.thumbSize = '_' + this.options.thumbSize;
 		
-		// grab slide template from slider markup
+		// grab slide template from slideshow markup
 		this.slideTemplate = this.slider.$element.find('.ms-slide')[0].outerHTML;
-		this.slider.$element.find('.ms-slide').remove(); // remove all slides from slider markup
+		this.slider.$element.find('.ms-slide').remove(); // remove all slides from slideshow markup
 	};
 
 	var p = MSFlickrV2.prototype;
@@ -7963,9 +7963,9 @@ MSViewEvents.CHANGE_END	     	= 'slideChangeEnd';
 			});
 		}
 
-		// grab slide template from slider markup
+		// grab slide template from slideshow markup
 		this.slideTemplate = this.slider.$element.find('.ms-slide')[0].outerHTML;
-		this.slider.$element.find('.ms-slide').remove(); // remove all slides from slider markup
+		this.slider.$element.find('.ms-slide').remove(); // remove all slides from slideshow markup
 	};
 
 	var p = MSFacebookGallery.prototype;
@@ -8230,7 +8230,7 @@ MSViewEvents.CHANGE_END	     	= 'slideChangeEnd';
 ;(function($, document, window){
 	var PId = 0;
 
-	// check if master slider is available
+	// check if master slideshow is available
 	if ( !window.MasterSlider ) {
 		return;
 	}
@@ -8274,7 +8274,7 @@ MSViewEvents.CHANGE_END	     	= 'slideChangeEnd';
 		this.slider.api.removeEventListener(MSSliderEvent.INIT, this.init, this);
 	};
 
-	// install plugin to master slider
+	// install plugin to master slideshow
 	MasterSlider.registerPlugin( KeyboardNav );
 
 })(jQuery, document, window);
@@ -8283,7 +8283,7 @@ MSViewEvents.CHANGE_END	     	= 'slideChangeEnd';
 /**
  * Start on appear plugin for Master Slider.
  * 
- * @description This plugin prevents slider automatically initialization and inits slider when it appears inside of the browser window.
+ * @description This plugin prevents slideshow automatically initialization and inits slideshow when it appears inside of the browser window.
  * @version  1.0.0
  * @author Averta
  * @package MasterSlider jQuery
@@ -8294,7 +8294,7 @@ MSViewEvents.CHANGE_END	     	= 'slideChangeEnd';
 	var $window = $(window),
 		$doc = $(document);
 
-	// check if master slider is available
+	// check if master slideshow is available
 	if ( !window.MasterSlider ) {
 		return;
 	}
@@ -8304,7 +8304,7 @@ MSViewEvents.CHANGE_END	     	= 'slideChangeEnd';
 		this.$slider = slider.$element;
 		
 		if ( this.slider.options.startOnAppear ) {
-			// hold on slider
+			// hold on slideshow
 			slider.holdOn();
 			$doc.ready($.proxy(this.init, this));
 		}
@@ -8322,7 +8322,7 @@ MSViewEvents.CHANGE_END	     	= 'slideChangeEnd';
 	};
 
 	p._onScroll = function () {
-		// check slider position
+		// check slideshow position
 		var vpBottom = $window.scrollTop() + $window.height(),
 			sliderTop = this.$slider.offset().top;
 
@@ -8337,7 +8337,7 @@ MSViewEvents.CHANGE_END	     	= 'slideChangeEnd';
 	 */
 	p.destroy = function(){};
 
-	// install plugin to master slider
+	// install plugin to master slideshow
 	MasterSlider.registerPlugin( StartOnAppear );
 
 })(jQuery, document, window);

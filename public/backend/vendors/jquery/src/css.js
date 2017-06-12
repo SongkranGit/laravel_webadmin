@@ -255,7 +255,7 @@ jQuery.extend( {
 	},
 
 	// Add in properties whose names you wish to fix before
-	// setting or getting the value
+	// Setting or getting the value
 	cssProps: {
 		"float": "cssFloat"
 	},

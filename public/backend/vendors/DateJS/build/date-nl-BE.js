@@ -3398,7 +3398,7 @@ Date.CultureStrings.lang = "nl-BE";
 				var offset = $D.getTimezoneOffset(this.timezone);
 				var timezone;
 				if (today.hasDaylightSavingTime()) {
-					// lets check that we're being sane with timezone setting
+					// lets check that we're being sane with timezone Setting
 					timezone = $D.getTimezoneAbbreviation(offset, today.isDaylightSavingTime());
 					if (timezone !== this.timezone) {
 						// bugger, we're in a place where things like EST vs EDT matters.

@@ -11,7 +11,7 @@
 
                 <div class="slide-pattern"></div>
 
-                <img src="js/masterslider/blank.gif" data-src="http://placehold.it/1920x620" alt=""/>
+                <img src="{{asset('upload/slideshow/129.jpg')}}"  alt=""/>
 
                 <h3 class="ms-layer text15 darkc caps"
                     style="left: 115px; top: 275px;"
@@ -20,7 +20,7 @@
                     data-duration="2000"
                     data-delay="500"
                     data-ease="easeOutExpo">
-                    trust worthy and timely
+                    health &amp; medical
 
                 </h3>
 
@@ -32,21 +32,10 @@
                     data-delay="1000"
                     data-ease="easeOutExpo"
                 >
-                    health &amp; medical
-
+                    Centrol Lab Medical
                 </h4>
 
-                <a class="ms-layer sbut15"
-                   style="left: 118px; top: 390px;"
-                   data-type="text"
-                   data-delay="1600"
-                   data-ease="easeOutExpo"
-                   data-duration="1200"
-                   data-effect="scale(1.5,1.6)"
-                >
-                    GET STARTED
 
-                </a>
 
             </div><!-- end slide 1 -->
 
@@ -55,7 +44,7 @@
 
                 <div class="slide-pattern"></div>
 
-                <img src="js/masterslider/blank.gif" data-src="http://placehold.it/1920x620" alt=""/>
+                <img src="{{asset('upload/slideshow/126.jpg')}}"  alt=""/>
 
                 <h3 class="ms-layer text15 darkc caps"
                     style="left: 115px; top: 275px;"
@@ -65,7 +54,7 @@
                     data-delay="100"
                     data-ease="easeOutExpo"
                 >
-                    Our doctors use technology
+                    We Are
 
                 </h3>
 
@@ -77,118 +66,55 @@
                     data-delay="500"
                     data-ease="easeOutExpo"
                 >
-                    CT scanning
+                    Centrol Lab Medical
 
                 </h4>
 
-                <a class="ms-layer sbut15"
-                   style="left: 118px; top: 390px;"
-                   data-type="text"
-                   data-delay="1200"
-                   data-ease="easeOutExpo"
-                   data-duration="1200"
-                   data-effect="scale(1.5,1.6)"
-                >
-                    GET STARTED
 
-                </a>
 
             </div><!-- end slide 2 -->
 
 
-            <div class="ms-slide slide-3" data-delay="5">
+            {{--<div class="ms-slide slide-3" data-delay="5">--}}
 
-                <div class="slide-pattern"></div>
+                {{--<div class="slide-pattern"></div>--}}
 
-                <img src="js/masterslider/blank.gif" data-src="http://placehold.it/1920x620" alt=""/>
+                {{--<img src="{{asset('upload/slideshow/127.jpg')}}" alt=""/>--}}
 
-                <h3 class="ms-layer text15 darkc caps"
-                    style="left: 115px; top: 275px;"
-                    data-type="text"
-                    data-effect="bottom(45)"
-                    data-duration="2000"
-                    data-delay="100"
-                    data-ease="easeOutExpo"
-                >
-                    Linstar help patients
+                {{--<h3 class="ms-layer text15 darkc caps"--}}
+                    {{--style="left: 115px; top: 275px;"--}}
+                    {{--data-type="text"--}}
+                    {{--data-effect="bottom(45)"--}}
+                    {{--data-duration="2000"--}}
+                    {{--data-delay="100"--}}
+                    {{--data-ease="easeOutExpo"--}}
+                {{-->--}}
+                   {{--We Are--}}
 
-                </h3>
+                {{--</h3>--}}
 
-                <h4 class="ms-layer text1 colored caps"
-                    style="left: 115px; top: 315px;"
-                    data-type="text"
-                    data-effect="bottom(45)"
-                    data-duration="2000"
-                    data-delay="500"
-                    data-ease="easeOutExpo"
-                >
-                    medical students
+                {{--<h4 class="ms-layer text1 colored caps"--}}
+                    {{--style="left: 115px; top: 315px;"--}}
+                    {{--data-type="text"--}}
+                    {{--data-effect="bottom(45)"--}}
+                    {{--data-duration="2000"--}}
+                    {{--data-delay="500"--}}
+                    {{--data-ease="easeOutExpo"--}}
+                {{-->--}}
+                    {{--Centrol Lab Medical--}}
 
-                </h4>
-
-                <a class="ms-layer sbut15"
-                   style="left: 118px; top: 390px;"
-                   data-type="text"
-                   data-delay="1200"
-                   data-ease="easeOutExpo"
-                   data-duration="1200"
-                   data-effect="scale(1.5,1.6)"
-                >
-                    GET STARTED
-
-                </a>
-
-            </div><!-- end slide 3 -->
+                {{--</h4>--}}
 
 
-            <div class="ms-slide slide-4" data-delay="5">
 
-                <div class="slide-pattern"></div>
+            {{--</div><!-- end slide 3 -->--}}
 
-                <img src="js/masterslider/blank.gif" data-src="http://placehold.it/1920x620" alt=""/>
 
-                <h3 class="ms-layer text15 darkc caps"
-                    style="left: 115px; top: 275px;"
-                    data-type="text"
-                    data-effect="bottom(45)"
-                    data-duration="2000"
-                    data-delay="100"
-                    data-ease="easeOutExpo"
-                >
-                    wide range of fields
-
-                </h3>
-
-                <h4 class="ms-layer text1 colored caps"
-                    style="left: 115px; top: 315px;"
-                    data-type="text"
-                    data-effect="bottom(45)"
-                    data-duration="2000"
-                    data-delay="500"
-                    data-ease="easeOutExpo"
-                >
-                    Medical Research
-
-                </h4>
-
-                <a class="ms-layer sbut15"
-                   style="left: 118px; top: 390px;"
-                   data-type="text"
-                   data-delay="1200"
-                   data-ease="easeOutExpo"
-                   data-duration="1200"
-                   data-effect="scale(1.5,1.6)"
-                >
-                    GET STARTED
-
-                </a>
-
-            </div><!-- end slide 4 -->
 
 
         </div>
     </div>
-    <!-- end slider -->
+    <!-- slideshowider -->
 
 
     <div class="clearfix"></div>

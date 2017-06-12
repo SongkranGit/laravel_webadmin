@@ -1,7 +1,7 @@
 define(function (require) {
 
     /**
-     * Calculate slider move result.
+     * Calculate slideshow move result.
      *
      * @param {number} delta Move length.
      * @param {Array.<number>} handleEnds handleEnds[0] and be bigger then handleEnds[1].

@@ -2,22 +2,21 @@
 
 namespace App\Http\Controllers\Frontend;
 
-use App\Http\Controllers\Controller;
-use App\Repositories\IUserRepository as IUserRepository;
 
+use App\Http\Controllers\FrontendBaseController;
+use App\Repositories\ISettingRepository;
 
-class HomeController extends Controller
+class HomeController extends FrontendBaseController
 {
-
 
     /**
      * Create a new controller instance.
      *
-     * @return void
+     * @param ISettingRepository $settingRepository
      */
-    public function __construct()
+    public function __construct( ISettingRepository $settingRepository)
     {
-
+        parent::__construct($settingRepository);
     }
 
     /**
@@ -27,6 +26,6 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('frontend.home');
+        return view('frontend.home' );
     }
 }

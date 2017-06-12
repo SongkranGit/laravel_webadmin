@@ -11385,7 +11385,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	        },
 
 	        /**
-	         * Batch setting style with a given object
+	         * Batch Setting style with a given object
 	         * @param {Object|string} obj
 	         * @param {*} [obj]
 	         */
@@ -45880,7 +45880,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 
 	    __webpack_require__(19).registerSubTypeDefaulter('dataZoom', function (option) {
-	        // Default 'slider' when no type specified.
+	        // Default 'slideshow' when no type specified.
 	        return 'slider';
 	    });
 
@@ -46342,7 +46342,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	     * Operate single axis.
 	     * One axis can only operated by one axis operator.
 	     * Different dataZoomModels may be defined to operate the same axis.
-	     * (i.e. 'inside' data zoom and 'slider' data zoom components)
+	     * (i.e. 'inside' data zoom and 'slideshow' data zoom components)
 	     * So dataZoomModels share one axisProxy in that case.
 	     *
 	     * @class
@@ -46807,7 +46807,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	            left: null,   // Default align to grid rect.
 	            bottom: null, // Default align to grid rect.
 
-	            backgroundColor: 'rgba(47,69,84,0)',    // Background of slider zoom component.
+	            backgroundColor: 'rgba(47,69,84,0)',    // Background of slideshow zoom component.
 	            dataBackgroundColor: '#ddd',            // Background of data shadow.
 	            fillerColor: 'rgba(47,69,84,0.15)',     // Color of selected area.
 	            handleColor: 'rgba(148,164,165,0.95)',     // Color of handle.
@@ -47749,7 +47749,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 
 	    /**
-	     * Calculate slider move result.
+	     * Calculate slideshow move result.
 	     *
 	     * @param {number} delta Move length.
 	     * @param {Array.<number>} handleEnds handleEnds[0] and be bigger then handleEnds[1].
@@ -52044,7 +52044,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 
 	    __webpack_require__(19).registerSubTypeDefaulter('timeline', function () {
-	        // Only slider now.
+	        // Only slideshow now.
 	        return 'slider';
 	    });
 

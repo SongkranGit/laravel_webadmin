@@ -454,16 +454,16 @@ slider.reset();
 
 There are 3 public methods:
 ```javascript
-// UPDATE - updates slider to any new values
+slideshow
 slider.update({
     from: 300,
     to: 400
 });
 
-// RESET - reset slider to it's first values
+slideshow
 slider.reset();
 
-// DESTROY - destroys slider and restores original input field
+slideshow
 slider.destroy();
 ```
 

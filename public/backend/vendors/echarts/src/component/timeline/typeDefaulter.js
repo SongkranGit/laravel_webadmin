@@ -1,7 +1,7 @@
 define(function (require) {
 
     require('../../model/Component').registerSubTypeDefaulter('timeline', function () {
-        // Only slider now.
+        // Only slideshow now.
         return 'slider';
     });
 

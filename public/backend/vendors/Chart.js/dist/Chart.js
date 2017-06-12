@@ -2207,7 +2207,7 @@ module.exports = function(Chart) {
 						halfStroke = vm.borderWidth / 2;
 
 					// Canvas doesn't allow us to stroke inside the width so we can
-					// adjust the sizes to fit if we're setting a stroke on the line
+					// adjust the sizes to fit if we're Setting a stroke on the line
 					if (vm.borderWidth) {
 						topY += halfStroke;
 						bottomY -= halfStroke;
@@ -8364,7 +8364,7 @@ module.exports = function(Chart) {
 				halfStroke = vm.borderWidth / 2;
 
 			// Canvas doesn't allow us to stroke inside the width so we can
-			// adjust the sizes to fit if we're setting a stroke on the line
+			// adjust the sizes to fit if we're Setting a stroke on the line
 			if (vm.borderWidth) {
 				leftX += halfStroke;
 				rightX -= halfStroke;

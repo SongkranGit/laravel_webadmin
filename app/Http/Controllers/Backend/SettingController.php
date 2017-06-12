@@ -2,15 +2,32 @@
 
 namespace App\Http\Controllers\Backend;
 
+use App\Models\Setting;
+use App\Repositories\ISettingRepository;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use function Sodium\compare;
+use Validator;
 
 class SettingController extends Controller
 {
 
-    function __construct()
+    private $rules = [
+        'website_name' => 'required',
+        'email' => 'required',
+        'address' => 'required',
+        'phone' => 'required',
+    ];
+
+    /**
+     * @var ISettingRepository
+     */
+    private $settingRepository;
+
+    function __construct(ISettingRepository $settingRepository)
     {
         $this->middleware('admin');
+        $this->settingRepository = $settingRepository;
     }
 
 
@@ -21,7 +38,16 @@ class SettingController extends Controller
      */
     public function index()
     {
-        return view('backend.setting.setting');
+        $setting = $this->settingRepository->findById(1);
+        if ($setting == null){
+            $form_action = 'create';
+            $setting = new Setting();
+        }
+        else{
+            $form_action = 'update';
+        }
+
+        return view('backend.setting.entry', compact('form_action', 'setting'));
     }
 
     /**
@@ -31,24 +57,35 @@ class SettingController extends Controller
      */
     public function create()
     {
-        return view('backend.setting.entry');
+        $form_action = 'create';
+        return view('backend.Setting.entry', compact('form_action'));
     }
 
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param  \Illuminate\Http\Request $request
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
     {
-        //
+        $validator = Validator::make($request->all(), $this->rules);
+        if ($validator->fails()) {
+            return redirect('admin/setting/create')
+                ->withErrors($validator)
+                ->withInput();
+        } else {
+            $input = $request->all();
+            $this->settingRepository->save($input);
+            return response()->redirectTo('admin/setting/edit');
+        }
+        //dump($request->all());
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  int $id
      * @return \Illuminate\Http\Response
      */
     public function show($id)
@@ -59,30 +96,41 @@ class SettingController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param  int $id
      * @return \Illuminate\Http\Response
      */
     public function edit($id)
     {
-        //
+        $form_action = 'update';
+        $setting = $this->settingRepository->findById(1);
+        return view('backend.setting.entry', compact('form_action' , 'setting') );
     }
 
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param  \Illuminate\Http\Request $request
+     * @param  int $id
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, $id)
     {
-        return view('backend.setting.entry');
+        $validator = Validator::make($request->all(), $this->rules);
+        if ($validator->fails()) {
+            return redirect()->route('setting.edit', ['id' => 1])
+                ->withErrors($validator)
+                ->withInput();
+        } else {
+            $input = $request->all();
+            $this->settingRepository->update(1, $input);
+            return redirect()->route('setting.edit', ['id' => 1]);
+        }
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  int $id
      * @return \Illuminate\Http\Response
      */
     public function destroy($id)

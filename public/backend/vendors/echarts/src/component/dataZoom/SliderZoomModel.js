@@ -26,7 +26,7 @@ define(function(require) {
             left: null,   // Default align to grid rect.
             bottom: null, // Default align to grid rect.
 
-            backgroundColor: 'rgba(47,69,84,0)',    // Background of slider zoom component.
+            backgroundColor: 'rgba(47,69,84,0)',    // Background of slideshow zoom component.
             dataBackgroundColor: '#ddd',            // Background of data shadow.
             fillerColor: 'rgba(47,69,84,0.15)',     // Color of selected area.
             handleColor: 'rgba(148,164,165,0.95)',     // Color of handle.

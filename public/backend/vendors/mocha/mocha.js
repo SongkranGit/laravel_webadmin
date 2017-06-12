@@ -5774,7 +5774,7 @@ mocha.ui = function(ui){
 };
 
 /**
- * Setup mocha with the given setting options.
+ * Setup mocha with the given Setting options.
  */
 
 mocha.setup = function(opts){

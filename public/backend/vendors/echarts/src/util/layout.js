@@ -327,7 +327,7 @@ define(function(require) {
             });
             each(names, function (name) {
                 // Consider case: newOption.width is null, which is
-                // set by user for removing width setting.
+                // set by user for removing width Setting.
                 hasProp(newOption, name) && (newParams[name] = merged[name] = newOption[name]);
                 hasValue(newParams, name) && newValueCount++;
                 hasValue(merged, name) && mergedValueCount++;

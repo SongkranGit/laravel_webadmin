@@ -7,109 +7,37 @@
 
             <div class="content_left">
 
-                <div class="blog_post">
-                    <div class="blog_postcontent">
-                        <div class="image_frame"><a href="#"><img src="http://placehold.it/1170x520" alt="" /></a></div>
-                        <h3><a href="blog-post.html">Many web sites still in their infancy</a></h3>
-                        <ul class="post_meta_links">
-                            <li><a href="#" class="date">27 May 2015</a></li>
-                            <li class="post_by"><i>by:</i> <a href="#">Adam Harrison</a></li>
-                            <li class="post_categoty"><i>in:</i> <a href="#">Web tutorials</a></li>
-                            <li class="post_comments"><i>note:</i> <a href="#">18 Comments</a></li>
-                        </ul>
-                        <div class="clearfix"></div>
-                        <div class="margin_top1"></div>
-                        <p>Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years <a href="#">read more...</a></p>
-                    </div>
-                </div><!-- /# end post -->
 
-                <div class="clearfix divider_line9"></div>
+                @if(isset($promotions))
 
-                <div class="blog_post">
-                    <div class="blog_postcontent">
-                        <div class="image_frame"><a href="#"><img src="http://placehold.it/1170x520" alt="" /></a></div>
-                        <h3><a href="blog-post.html">Letraset sheets containing lorem passages</a></h3>
-                        <ul class="post_meta_links">
-                            <li><a href="#" class="date">26 May 2015</a></li>
-                            <li class="post_by"><i>by:</i> <a href="#">Adam Harrison</a></li>
-                            <li class="post_categoty"><i>in:</i> <a href="#">Web tutorials</a></li>
-                            <li class="post_comments"><i>note:</i> <a href="#">18 Comments</a></li>
-                        </ul>
-                        <div class="clearfix"></div>
-                        <div class="margin_top1"></div>
-                        <p>Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years <a href="#">read more...</a></p>
-                    </div>
-                </div><!-- /# end post -->
+                    @foreach($promotions as $promotion)
 
-                <div class="clearfix divider_line9"></div>
+                        <div class="blog_post">
+                            <div class="blog_postcontent">
+                                <div class="image_frame"><a href="#"><img src="{{url($promotion->image_name)}}" alt="" /></a></div>
+                                <h3><a href="blog-post.html">Many web sites still in their infancy</a></h3>
+                                <ul class="post_meta_links">
+                                    <li><a href="#" class="date">27 May 2015</a></li>
+                                    <li class="post_by"><i>by:</i> <a href="#">Adam Harrison</a></li>
+                                </ul>
+                                <div class="clearfix"></div>
+                                <div class="margin_top1"></div>
+                                <p>{{$promotion->description}} <a href="#">read more...</a></p>
+                            </div>
+                        </div><!-- /# end post -->
 
+                        <div class="clearfix divider_line9"></div>
 
-                <div class="blog_post">
-                    <div class="blog_postcontent">
-                        <div class="video_frame"><iframe src="http://www.youtube.com/embed/YRb-xF0RW-k"></iframe></div>
-                        <h3><a href="blog-post.html">Through the cites of the word in classical literature</a></h3>
-                        <ul class="post_meta_links">
-                            <li><a href="#" class="date">25 May 2015</a></li>
-                            <li class="post_by"><i>by:</i> <a href="#">Adam Harrison</a></li>
-                            <li class="post_categoty"><i>in:</i> <a href="#">Web tutorials</a></li>
-                            <li class="post_comments"><i>note:</i> <a href="#">18 Comments</a></li>
-                        </ul>
-                        <div class="clearfix"></div>
-                        <div class="margin_top1"></div>
-                        <p>Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years <a href="#">read more...</a></p>
-                    </div>
-                </div><!-- /# end post -->
+                    @endforeach
 
-                <div class="clearfix divider_line9"></div>
-
-
-                <div class="blog_post">
-                    <div class="blog_postcontent">
-                        <div class="image_frame"><a href="#"><img src="http://placehold.it/1170x520" alt="" /></a></div>
-                        <h3><a href="blog-post.html">Making this the first true generator on the internet</a></h3>
-                        <ul class="post_meta_links">
-                            <li><a href="#" class="date">24 May 2015</a></li>
-                            <li class="post_by"><i>by:</i> <a href="#">Adam Harrison</a></li>
-                            <li class="post_categoty"><i>in:</i> <a href="#">Web tutorials</a></li>
-                            <li class="post_comments"><i>note:</i> <a href="#">18 Comments</a></li>
-                        </ul>
-                        <div class="clearfix"></div>
-                        <div class="margin_top1"></div>
-                        <p>Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years <a href="#">read more...</a></p>
-                    </div>
-                </div><!-- /# end post -->
-
-                <div class="clearfix divider_line9"></div>
-
-
-                <div class="blog_post">
-                    <div class="blog_postcontent">
-                        <div class="image_frame"><a href="#"><img src="http://placehold.it/1170x520" alt="" /></a></div>
-                        <h3><a href="blog-post.html">Versions have evolved over the years</a></h3>
-                        <ul class="post_meta_links">
-                            <li><a href="#" class="date">23 May 2015</a></li>
-                            <li class="post_by"><i>by:</i> <a href="#">Adam Harrison</a></li>
-                            <li class="post_categoty"><i>in:</i> <a href="#">Web tutorials</a></li>
-                            <li class="post_comments"><i>note:</i> <a href="#">18 Comments</a></li>
-                        </ul>
-                        <div class="clearfix"></div>
-                        <div class="margin_top1"></div>
-                        <p>Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years <a href="#">read more...</a></p>
-                    </div>
-                </div><!-- /# end post -->
-
-                <div class="clearfix divider_line13 margin_top4 lessm"></div>
+                @endif
 
                 <div>
 
                     <div class="pagination">
-                        <b>Page 2 of 18</b>
-                        <a href="#" class="navlinks">&lt; Previous</a>
-                        <a href="#" class="navlinks">1</a>
-                        <a href="#" class="navlinks current">2</a>
-                        <a href="#" class="navlinks">3</a>
-                        <a href="#" class="navlinks">4</a>
-                        <a href="#" class="navlinks">Next ></a>
+                        <b>Page {{$promotions->currentPage()}} of {{$promotions->lastPage()}}</b>
+                        {{ $promotions->links('vendor.pagination.custom') }}
+
                     </div><!-- /# end pagination -->
 
                 </div>

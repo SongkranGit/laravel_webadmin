@@ -1,17 +1,26 @@
 <?php
 
-namespace App\Http\Controllers\frontend;
+namespace App\Http\Controllers\Frontend;
 
-use App\Http\Controllers\FrontendBaseController;
+
+use App\Models\Promotion;
+use App\Repositories\IPromotionRepository;
 use App\Repositories\ISettingRepository;
 use Illuminate\Http\Request;
 
 class PromotionController extends FrontendBaseController
 {
 
-    function __construct(ISettingRepository $settingRepository)
+    /**
+     * @var IPromotionRepository
+     */
+    private $promotionRepository;
+
+    function __construct(ISettingRepository $settingRepository , IPromotionRepository $promotionRepository)
     {
         parent::__construct($settingRepository);
+        $this->settingRepository = $settingRepository;
+        $this->promotionRepository = $promotionRepository;
     }
 
     /**
@@ -21,7 +30,9 @@ class PromotionController extends FrontendBaseController
      */
     public function index()
     {
-        return view('frontend.promotion');
+        $promotions =  Promotion::paginate(2);
+
+        return view('frontend.promotion' , compact('promotions'));
     }
 
     /**

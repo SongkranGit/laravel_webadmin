@@ -1,10 +1,10 @@
 <?php
 
 namespace App\Http\Controllers\Backend;
-use App\Models\Promotion;
 use App\Repositories\IPromotionRepository as IPromotionRepository;
 use App\Repositories\IUserRepository as IUserRepository;
 use File;
+use Illuminate\Http\FileHelpers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Image;
@@ -18,6 +18,12 @@ class PromotionController extends BaseAdminController
      * @var IPromotionRepository
      */
     private $promotionRepository;
+
+    private $rules = array(
+        'name'       => 'required',
+        'description'      => 'required',
+        'is_active' => 'required'
+    );
 
     function __construct(IUserRepository $userRepository , IPromotionRepository $promotionRepository)
     {
@@ -54,12 +60,7 @@ class PromotionController extends BaseAdminController
      */
     public function store(Request $request)
     {
-        $rules = array(
-            'name'       => 'required',
-            'description'      => 'required',
-            'is_active' => 'required'
-        );
-        $validator = Validator::make($request->all(), $rules);
+        $validator = Validator::make($request->all(), $this->rules);
         if ($validator->fails()) {
             return redirect()->route('promotion.create')
                 ->withErrors($validator)
@@ -67,7 +68,10 @@ class PromotionController extends BaseAdminController
         }else{
             $input = $request->all();
             $input['created_by'] = $this->userRepository->currentUser()->id;
-            $input['image_name'] = $this->uploadImage($request);
+            if ($request->hasFile('file_upload')) {
+                $input['image_name'] = $this->uploadImage($request);
+            }
+
             $this->promotionRepository->save($input);
             return redirect()->route('promotion.create');
         }
@@ -92,7 +96,8 @@ class PromotionController extends BaseAdminController
      */
     public function edit($id)
     {
-        //
+        $promotion = $this->promotionRepository->findById($id);
+        return view('backend.modules.promotion.edit' , compact('promotion'));
     }
 
     /**
@@ -104,7 +109,22 @@ class PromotionController extends BaseAdminController
      */
     public function update(Request $request, $id)
     {
-        //
+        $validator = Validator::make($request->all(), $this->rules);
+        if ($validator->fails()) {
+            return redirect('admin/promotion/' . $id . '/edit')
+                ->withErrors($validator)
+                ->withInput();
+        }else{
+            $input = $request->all();
+            if ($request->hasFile('file_upload')) {
+                $promotion = $this->promotionRepository->findById($id);
+                delete_file($promotion->image_name);
+                $input['image_name'] = $this->uploadImage($request);
+            }
+
+            $this->promotionRepository->update($id , $input);
+            return redirect()->route('promotion.index');
+        }
     }
 
     /**

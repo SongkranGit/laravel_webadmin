@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Http\Controllers\frontend;
+namespace App\Http\Controllers\Frontend;
 
-use App\Http\Controllers\FrontendBaseController;
+
 use App\Repositories\ISettingRepository;
 use Illuminate\Http\Request;
 

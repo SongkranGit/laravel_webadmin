@@ -6,9 +6,10 @@
  * Time: 12:49 AM
  */
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Frontend;
 
 
+use App\Http\Controllers\Controller;
 use App\Repositories\ISettingRepository;
 use Auth;
 use View;

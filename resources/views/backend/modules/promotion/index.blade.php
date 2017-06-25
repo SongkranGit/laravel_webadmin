@@ -19,9 +19,9 @@
                             <th>ลำดับ</th>
                             <th>รูปภาพ</th>
                             <th>ชื่อโปรโมชั่น</th>
-                            <th>สถานะ</th>
-                            <th>สร้างโดข</th>
+                            <th>สร้างโดย</th>
                             <th>วันที่สร้าง</th>
+                            <th>สถานะ</th>
                             <th>&nbsp;</th>
                         </tr>
                         </thead>
@@ -57,19 +57,20 @@
                 {data: null, "sClass": "text-center", "bSortable": false, "sWidth": "3%"}, //1st column
                 {data: 'image_name', name: 'image_name'},
                 {data: 'name', name: 'name'},
-                {data: 'is_active', name: 'is_active'},
                 {data: 'created_by', name: 'created_by'},
                 {data: 'created_at', name: 'created_at'},
-
+                {data: 'is_active', name: 'is_active'},
             ],
             columnDefs: [
-                {width: '15%', className: "text-center", targets: 1 , render: function (data, type, row) {
+                {width: '15%',className: "text-center", targets: 1 , render: function (data, type, row) {
                     var html = '<img src="{{url('/').'/' }}'+row.image_name+'" height="60"/>';
                     return html;
                 }},
-                {targets: 2},
-                {targets: 3, render: function (data, type, row) {
-                    var label_text = '<div class="text-left"> ';
+                {width: '25%',targets: 2},
+                {width: '15%',targets: 3},
+                {width: '10%',className: "text-center",targets: 4},
+                {width: '8%',className: "text-center", targets: 5, render: function (data, type, row) {
+                    var label_text = '<div class="text-center"> ';
                     if (parseInt(row.is_active) == 0) {
                         label_text += '<h4><span class=\"label label-success\" >' + 'ใช้งาน' + '</span></h4>';
                     } else {
@@ -77,13 +78,10 @@
                     }
                     label_text += '</div>'
                     return label_text;
-                }
-                },
-                {targets: 4},
-                {targets: 5},
-                {targets: 6, render: function (data, type, row) {
-                    var buttons = '<div class="btn-toolbar"> ';
-                    buttons += '<a href="{{ url('/')}}/admin/user/' + row.id + '/edit "  class="btn btn-warning btn-sm glyphicon glyphicon-pencil " data-toggle="tooltip" data-placement="top" title="แก้ไขข้อมูล"></a>';
+                }},
+                {width: '10%',className: "text-center", targets: 6, render: function (data, type, row) {
+                    var buttons = '<div class=""> ';
+                    buttons += '<a href="{{ url('/')}}/admin/promotion/' + row.id + '/edit "  class="btn btn-warning btn-sm glyphicon glyphicon-pencil " data-toggle="tooltip" data-placement="top" title="แก้ไขข้อมูล"></a>';
                     buttons += '<a href="javascript:void(0)" onclick="deleteData(' + row.id + ')" class="button_delete btn btn-danger btn-sm glyphicon glyphicon-trash" data-toggle="tooltip" data-placement="top" title="ลบข้อมูล"></a>';
                     buttons += '</div>'
                     return buttons;

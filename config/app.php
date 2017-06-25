@@ -14,6 +14,7 @@ return [
 
     'name' => env('APP_NAME', 'ControlLabMedical'),
     'site_name' => env('SITE_NAME', 'ControLabMedical'),
+    'upload_promotion' => 'public/upload/promotion/',
 
     /*
     |--------------------------------------------------------------------------

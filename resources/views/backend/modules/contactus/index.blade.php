@@ -5,8 +5,8 @@
         <div class="col-md-12 col-sm-12 col-xs-12">
             <div class="x_panel">
                 <div class="x_title">
-                    <h2>รายการโปรโมชั่น</h2>
-                    <div class="navbar-right"><a href="{{url('admin/promotion/create')}}" class="btn btn-primary"><i class="fa fa-plus"></i> <strong>เพิ่มโปรโมชั่น</strong>
+                    <h2>รายการผู้ใช้งาน</h2>
+                    <div class="navbar-right"><a href="{{url('admin/user/create')}}" class="btn btn-success btn-sm"><i class="fa fa-plus"></i> <strong>เพิ่มผู้ใช้</strong>
                         </a>
                     </div>
                     <div class="clearfix"></div>
@@ -17,7 +17,7 @@
                         <thead>
                         <tr>
                             <th>ลำดับ</th>
-                            <th>ชื่อโปรโมชั่น</th>
+                            <th>ชื่อ-สกุล</th>
                             <th>อีเมล์</th>
                             <th>สิทธิ</th>
                             <th>สถานะ</th>

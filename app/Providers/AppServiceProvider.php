@@ -2,9 +2,11 @@
 
 namespace App\Providers;
 
+use App\Repositories\IPromotionRepository;
 use App\Repositories\IRoleRepository;
 use App\Repositories\ISettingRepository;
 use App\Repositories\IUserRepository;
+use App\Repositories\PromotionRepository;
 use App\Repositories\RoleRepository;
 use App\Repositories\SettingRepository;
 use App\Repositories\UserRepository;
@@ -46,6 +48,7 @@ class AppServiceProvider extends ServiceProvider
         $this->app->singleton(IUserRepository::class , UserRepository::class );
         $this->app->singleton(IRoleRepository::class , RoleRepository::class);
         $this->app->singleton(ISettingRepository::class , SettingRepository::class);
+        $this->app->singleton(IPromotionRepository::class , PromotionRepository::class);
 
     }
 }

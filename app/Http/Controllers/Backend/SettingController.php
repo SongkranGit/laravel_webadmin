@@ -47,7 +47,7 @@ class SettingController extends Controller
             $form_action = 'update';
         }
 
-        return view('backend.setting.entry', compact('form_action', 'setting'));
+        return view('backend.modules.setting.entry', compact('form_action', 'setting'));
     }
 
     /**
@@ -58,7 +58,7 @@ class SettingController extends Controller
     public function create()
     {
         $form_action = 'create';
-        return view('backend.Setting.entry', compact('form_action'));
+        return view('backend..modules.setting.entry', compact('form_action'));
     }
 
     /**
@@ -103,7 +103,7 @@ class SettingController extends Controller
     {
         $form_action = 'update';
         $setting = $this->settingRepository->findById(1);
-        return view('backend.setting.entry', compact('form_action' , 'setting') );
+        return view('backend.modules.setting.entry', compact('form_action' , 'setting') );
     }
 
     /**

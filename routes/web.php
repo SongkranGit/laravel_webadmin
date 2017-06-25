@@ -41,13 +41,18 @@ Route::group(['prefix' => 'admin','middleware' => ['admin']], function () {
     Route::resource('/promotion', 'Backend\PromotionController');
     Route::resource('/slideshow', 'Backend\SlideshowController');
     Route::resource('/setting', 'Backend\SettingController');
+    Route::resource('/aboutus', 'Backend\AboutusController');
+    Route::resource('/contactus', 'Backend\ContactusController');
+    Route::resource('/ourservices', 'Backend\OurserviceController');
 
    // Route::get('/login', 'Backend\Auth\LoginController@index');
     Route::get('/logout', 'Backend\Auth\LoginController@getLogout');
     Route::get('/dashboard', 'Backend\DashboardController@index');
     Route::get('/home', 'Backend\HomeController@index');
 
+
     Route::post('/user/loadUsersDataTable', 'Backend\UserController@loadUsersDataTable')->name('user.loadUsersDataTable');
+    Route::post('/promotion/loadPromotionsDataTable', 'Backend\PromotionController@loadPromotionsDataTable')->name('promotion.loadPromotionsDataTable');
 });
 
 

@@ -38,7 +38,7 @@ class UserController extends Controller
     public function index()
     {
         $users = $this->userRepository->findAll();
-        return view('backend.user.index' , compact('users' ));
+        return view('backend.modules.user.index' , compact('users' ));
     }
 
     /**
@@ -49,7 +49,7 @@ class UserController extends Controller
     public function create()
     {
         $roles = $this->roleRepository->findAll();
-        return view('backend.user.create', compact('roles' ));
+        return view('backend.modules.user.create', compact('roles' ));
     }
 
     /**
@@ -101,7 +101,7 @@ class UserController extends Controller
         $roles = $this->roleRepository->findAll();
         $user = $this->userRepository->findById($id);
         $role_selected = $user->roles()->find($id);
-        return view('backend.user.edit' , compact('roles' , 'user' , 'role_selected'));
+        return view('backend.modules.user.edit' , compact('roles' , 'user' , 'role_selected'));
     }
 
     /**

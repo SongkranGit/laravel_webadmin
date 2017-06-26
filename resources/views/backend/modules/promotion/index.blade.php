@@ -22,7 +22,7 @@
                             <th>สร้างโดย</th>
                             <th>วันที่สร้าง</th>
                             <th>สถานะ</th>
-                            <th>&nbsp;</th>
+                            <th class="text-center">จัดการ</th>
                         </tr>
                         </thead>
                     </table>
@@ -79,8 +79,9 @@
                     label_text += '</div>'
                     return label_text;
                 }},
-                {width: '10%',className: "text-center", targets: 6, render: function (data, type, row) {
-                    var buttons = '<div class=""> ';
+                {width: '15%', className: "text-center", targets: 6, render: function (data, type, row) {
+                    var buttons = '<div> ';
+                    buttons += '<a href="javascript:void(0)"  class="btn btn-info btn-sm glyphicon glyphicon-trash" data-toggle="tooltip" data-placement="top"> รายละเเอียด</a>';
                     buttons += '<a href="{{ url('/')}}/admin/promotion/' + row.id + '/edit "  class="btn btn-warning btn-sm glyphicon glyphicon-pencil " data-toggle="tooltip" data-placement="top" title="แก้ไขข้อมูล"></a>';
                     buttons += '<a href="javascript:void(0)" onclick="deleteData(' + row.id + ')" class="button_delete btn btn-danger btn-sm glyphicon glyphicon-trash" data-toggle="tooltip" data-placement="top" title="ลบข้อมูล"></a>';
                     buttons += '</div>'

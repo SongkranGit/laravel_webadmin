@@ -30,7 +30,7 @@ class PromotionController extends FrontendBaseController
      */
     public function index()
     {
-        $promotions =  Promotion::paginate(2);
+        $promotions =  Promotion::paginate(5);
 
         return view('frontend.promotion' , compact('promotions'));
     }

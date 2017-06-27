@@ -66,10 +66,10 @@
                     var html = '<img src="{{url('/').'/' }}'+row.image_name+'" height="60"/>';
                     return html;
                 }},
-                {width: '25%',targets: 2},
+                {width: '30%',targets: 2},
                 {width: '15%',targets: 3},
-                {width: '10%',className: "text-center",targets: 4},
-                {width: '8%',className: "text-center", targets: 5, render: function (data, type, row) {
+                {width: '15%',className: "text-center",targets: 4},
+                {width: '10%',className: "text-center", targets: 5, render: function (data, type, row) {
                     var label_text = '<div class="text-center"> ';
                     if (parseInt(row.is_active) == 0) {
                         label_text += '<h4><span class=\"label label-success\" >' + 'ใช้งาน' + '</span></h4>';
@@ -79,9 +79,9 @@
                     label_text += '</div>'
                     return label_text;
                 }},
-                {width: '15%', className: "text-center", targets: 6, render: function (data, type, row) {
+                {width: '20%', className: "text-center", targets: 6, render: function (data, type, row) {
                     var buttons = '<div> ';
-                    buttons += '<a href="javascript:void(0)"  class="btn btn-info btn-sm glyphicon glyphicon-trash" data-toggle="tooltip" data-placement="top"> รายละเเอียด</a>';
+                    buttons += '<a href="javascript:void(0)"  class="btn btn-info btn-sm glyphicon glyphicon-eye-open" data-toggle="tooltip" data-placement="top" title="หน้ารายละเอียด"></a>';
                     buttons += '<a href="{{ url('/')}}/admin/promotion/' + row.id + '/edit "  class="btn btn-warning btn-sm glyphicon glyphicon-pencil " data-toggle="tooltip" data-placement="top" title="แก้ไขข้อมูล"></a>';
                     buttons += '<a href="javascript:void(0)" onclick="deleteData(' + row.id + ')" class="button_delete btn btn-danger btn-sm glyphicon glyphicon-trash" data-toggle="tooltip" data-placement="top" title="ลบข้อมูล"></a>';
                     buttons += '</div>'
@@ -107,6 +107,12 @@
                 cell.innerHTML = i + 1;
             });
         }).draw();
+
+
+        $('#promotion_table tbody').on('click', 'tr', function () {
+            var data = table.row( this ).data();
+            alert( 'You clicked on '+data[0]+'\'s row' );
+        } );
 
     }
 

@@ -15,7 +15,7 @@
                         <div class="blog_post">
                             <div class="blog_postcontent">
                                 <div class="image_frame"><a href="#"><img src="{{url($promotion->image_name)}}" alt="" /></a></div>
-                                <h3><a href="blog-post.html">Many web sites still in their infancy</a></h3>
+                                <h3><a href="blog-post.html">{{$promotion->name}}</a></h3>
                                 <ul class="post_meta_links">
                                     <li><a href="#" class="date">27 May 2015</a></li>
                                     <li class="post_by"><i>by:</i> <a href="#">Adam Harrison</a></li>

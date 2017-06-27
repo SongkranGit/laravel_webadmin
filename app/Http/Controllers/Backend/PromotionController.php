@@ -4,7 +4,6 @@ namespace App\Http\Controllers\Backend;
 use App\Repositories\IPromotionRepository as IPromotionRepository;
 use App\Repositories\IUserRepository as IUserRepository;
 use File;
-use Illuminate\Http\FileHelpers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Image;
@@ -22,6 +21,7 @@ class PromotionController extends BaseAdminController
     private $rules = array(
         'name'       => 'required',
         'description'      => 'required',
+        'detail'      => 'required',
         'is_active' => 'required'
     );
 
@@ -150,7 +150,6 @@ class PromotionController extends BaseAdminController
         }
 
         $filename = strtolower(
-            //pathinfo($image->getClientOriginalName(), PATHINFO_FILENAME)
             'promotion'
             .'-'
             .time()
@@ -170,7 +169,6 @@ class PromotionController extends BaseAdminController
     }
 
     public function loadPromotionsDataTable(){
-      //  return Datatables::of(Promotion::query())->make(true);
         return Datatables::of(
             DB::select('select p.id , p.name , p.description , p.created_at , p.is_active , p.image_name , u.name as created_by  
                         from promotions p 

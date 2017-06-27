@@ -59,11 +59,20 @@
                         </div>
 
                         <div class="item form-group">
-                            <label class="control-label col-md-3 col-sm-3 col-xs-12">รายละเอียด <span class="required">*</span>
+                            <label class="control-label col-md-3 col-sm-3 col-xs-12">ข้อมูลแบบย่อ <span class="required">*</span>
                             </label>
                             <div class="col-md-6 col-sm-6 col-xs-12">
-                                <textarea name="description" id="description" class="form-control" rows="5">{{$promotion->description}}</textarea>
+                                <textarea name="description" id="description" class="form-control" rows="3">{{$promotion->description}}</textarea>
                                 <div class="help-block with-errors">{{ $errors->first('description') }}</div>
+                            </div>
+                        </div>
+
+                        <div class="item form-group">
+                            <label class="control-label col-md-3 col-sm-3 col-xs-12">ข้อมูลรายละเอียด <span class="required">*</span>
+                            </label>
+                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                <textarea name="detail" id="detail" class="form-control" rows="5">{{$promotion->detail}}</textarea>
+                                <div class="help-block with-errors">{{ $errors->first('detail') }}</div>
                             </div>
                         </div>
 
@@ -101,7 +110,7 @@
 
 <script>
 
-    CKEDITOR.replace('description');
+    CKEDITOR.replace('detail');
 
     $(document).ready(function () {
 

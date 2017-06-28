@@ -81,7 +81,6 @@
                 }},
                 {width: '20%', className: "text-center", targets: 6, render: function (data, type, row) {
                     var buttons = '<div> ';
-                    buttons += '<a href="javascript:void(0)"  class="btn btn-info btn-sm glyphicon glyphicon-eye-open" data-toggle="tooltip" data-placement="top" title="หน้ารายละเอียด"></a>';
                     buttons += '<a href="{{ url('/')}}/admin/promotion/' + row.id + '/edit "  class="btn btn-warning btn-sm glyphicon glyphicon-pencil " data-toggle="tooltip" data-placement="top" title="แก้ไขข้อมูล"></a>';
                     buttons += '<a href="javascript:void(0)" onclick="deleteData(' + row.id + ')" class="button_delete btn btn-danger btn-sm glyphicon glyphicon-trash" data-toggle="tooltip" data-placement="top" title="ลบข้อมูล"></a>';
                     buttons += '</div>'

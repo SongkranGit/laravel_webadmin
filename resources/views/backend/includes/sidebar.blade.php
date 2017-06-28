@@ -7,10 +7,11 @@
                 || Request::segment(2)=='aboutus'
                 || Request::segment(2)=='ourservices'
                 || Request::segment(2)=='contactus'
+                || Request::segment(2)=='promotion'
                 || Request::segment(2)=='slideshow'?'class=active':''}}>
                 <a><i class="fa fa-edit"></i> เนื้อหา <span class="fa fa-chevron-down"></span></a>
                 <ul class="nav child_menu">
-                    <li><a href="{{url('admin/promotion')}}">Home</a></li>
+                    <li><a href="{{url('admin/home')}}">Home</a></li>
                     <li><a href="{{url('admin/aboutus')}}">About Us</a></li>
                     <li><a href="{{url('admin/ourservices')}}">Our Services</a></li>
                     <li><a href="{{url('admin/promotion')}}">Promotion</a></li>

@@ -14,7 +14,7 @@ class AboutusController extends Controller
      */
     public function index()
     {
-        //
+        return view('backend.modules.aboutus.edit');
     }
 
     /**
@@ -57,7 +57,7 @@ class AboutusController extends Controller
      */
     public function edit($id)
     {
-        //
+        return view('backend.modules.aboutus.edit');
     }
 
     /**

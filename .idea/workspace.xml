@@ -2,37 +2,87 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="91c8fa5a-1e53-4c44-936c-c99962460982" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/vendor/unisharp/laravel-ckeditor/skins/icy_orange/bold.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/vendor/unisharp/laravel-ckeditor/skins/icy_orange/find-rtl.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/vendor/unisharp/laravel-ckeditor/skins/icy_orange/icons.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/vendor/unisharp/laravel-ckeditor/skins/icy_orange/icons_hidpi.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/vendor/unisharp/laravel-ckeditor/skins/icy_orange/images/arrow.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/vendor/unisharp/laravel-ckeditor/skins/icy_orange/images/close.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/vendor/unisharp/laravel-ckeditor/skins/icy_orange/images/hidpi/close.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/vendor/unisharp/laravel-ckeditor/skins/icy_orange/images/hidpi/lock-open.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/vendor/unisharp/laravel-ckeditor/skins/icy_orange/images/hidpi/lock.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/vendor/unisharp/laravel-ckeditor/skins/icy_orange/images/hidpi/refresh.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/vendor/unisharp/laravel-ckeditor/skins/icy_orange/images/lock-open.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/vendor/unisharp/laravel-ckeditor/skins/icy_orange/images/lock.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/vendor/unisharp/laravel-ckeditor/skins/icy_orange/images/refresh.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/vendor/unisharp/laravel-ckeditor/skins/icy_orange/scayt.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/vendor/unisharp/laravel-ckeditor/skins/icy_orange/dialog.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/vendor/unisharp/laravel-ckeditor/skins/icy_orange/dialog_ie.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/vendor/unisharp/laravel-ckeditor/skins/icy_orange/dialog_ie7.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/vendor/unisharp/laravel-ckeditor/skins/icy_orange/dialog_ie8.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/vendor/unisharp/laravel-ckeditor/skins/icy_orange/dialog_iequirks.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/vendor/unisharp/laravel-ckeditor/skins/icy_orange/dialog_opera.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/vendor/unisharp/laravel-ckeditor/skins/icy_orange/editor.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/vendor/unisharp/laravel-ckeditor/skins/icy_orange/editor_gecko.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/vendor/unisharp/laravel-ckeditor/skins/icy_orange/editor_ie.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/vendor/unisharp/laravel-ckeditor/skins/icy_orange/editor_ie7.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/vendor/unisharp/laravel-ckeditor/skins/icy_orange/editor_ie8.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/vendor/unisharp/laravel-ckeditor/skins/icy_orange/editor_iequirks.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/vendor/unisharp/laravel-ckeditor/skins/icy_orange/readme.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/vendor/unisharp/laravel-ckeditor/skins/moonocolor/icons.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/vendor/unisharp/laravel-ckeditor/skins/moonocolor/icons_hidpi.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/vendor/unisharp/laravel-ckeditor/skins/moonocolor/images/arrow.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/vendor/unisharp/laravel-ckeditor/skins/moonocolor/images/close.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/vendor/unisharp/laravel-ckeditor/skins/moonocolor/images/hidpi/close.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/vendor/unisharp/laravel-ckeditor/skins/moonocolor/images/hidpi/lock-open.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/vendor/unisharp/laravel-ckeditor/skins/moonocolor/images/hidpi/lock.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/vendor/unisharp/laravel-ckeditor/skins/moonocolor/images/hidpi/refresh.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/vendor/unisharp/laravel-ckeditor/skins/moonocolor/images/lock-open.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/vendor/unisharp/laravel-ckeditor/skins/moonocolor/images/lock.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/vendor/unisharp/laravel-ckeditor/skins/moonocolor/images/refresh.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/vendor/unisharp/laravel-ckeditor/skins/moonocolor/images/spinner.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/vendor/unisharp/laravel-ckeditor/skins/moonocolor/dialog.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/vendor/unisharp/laravel-ckeditor/skins/moonocolor/dialog_ie.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/vendor/unisharp/laravel-ckeditor/skins/moonocolor/dialog_ie7.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/vendor/unisharp/laravel-ckeditor/skins/moonocolor/dialog_ie8.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/vendor/unisharp/laravel-ckeditor/skins/moonocolor/dialog_iequirks.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/vendor/unisharp/laravel-ckeditor/skins/moonocolor/editor.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/vendor/unisharp/laravel-ckeditor/skins/moonocolor/editor_gecko.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/vendor/unisharp/laravel-ckeditor/skins/moonocolor/editor_ie.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/vendor/unisharp/laravel-ckeditor/skins/moonocolor/editor_ie7.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/vendor/unisharp/laravel-ckeditor/skins/moonocolor/editor_ie8.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/vendor/unisharp/laravel-ckeditor/skins/moonocolor/editor_iequirks.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/vendor/unisharp/laravel-ckeditor/skins/moonocolor/readme.md" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public_html/vendor/unisharp/laravel-ckeditor/skins/icy_orange/bold.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public_html/vendor/unisharp/laravel-ckeditor/skins/icy_orange/dialog.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public_html/vendor/unisharp/laravel-ckeditor/skins/icy_orange/dialog_ie.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public_html/vendor/unisharp/laravel-ckeditor/skins/icy_orange/dialog_ie7.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public_html/vendor/unisharp/laravel-ckeditor/skins/icy_orange/dialog_ie8.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public_html/vendor/unisharp/laravel-ckeditor/skins/icy_orange/dialog_iequirks.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public_html/vendor/unisharp/laravel-ckeditor/skins/icy_orange/dialog_opera.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public_html/vendor/unisharp/laravel-ckeditor/skins/icy_orange/editor.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public_html/vendor/unisharp/laravel-ckeditor/skins/icy_orange/editor_gecko.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public_html/vendor/unisharp/laravel-ckeditor/skins/icy_orange/editor_ie.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public_html/vendor/unisharp/laravel-ckeditor/skins/icy_orange/editor_ie7.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public_html/vendor/unisharp/laravel-ckeditor/skins/icy_orange/editor_ie8.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public_html/vendor/unisharp/laravel-ckeditor/skins/icy_orange/editor_iequirks.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public_html/vendor/unisharp/laravel-ckeditor/skins/icy_orange/find-rtl.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public_html/vendor/unisharp/laravel-ckeditor/skins/icy_orange/icons.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public_html/vendor/unisharp/laravel-ckeditor/skins/icy_orange/icons_hidpi.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public_html/vendor/unisharp/laravel-ckeditor/skins/icy_orange/images/arrow.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public_html/vendor/unisharp/laravel-ckeditor/skins/icy_orange/images/close.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public_html/vendor/unisharp/laravel-ckeditor/skins/icy_orange/images/hidpi/close.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public_html/vendor/unisharp/laravel-ckeditor/skins/icy_orange/images/hidpi/lock.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public_html/vendor/unisharp/laravel-ckeditor/skins/icy_orange/images/hidpi/refresh.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public_html/vendor/unisharp/laravel-ckeditor/skins/icy_orange/images/lock-open.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public_html/vendor/unisharp/laravel-ckeditor/skins/icy_orange/images/lock.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public_html/vendor/unisharp/laravel-ckeditor/skins/icy_orange/images/refresh.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public_html/vendor/unisharp/laravel-ckeditor/skins/icy_orange/scayt.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public_html/vendor/unisharp/laravel-ckeditor/skins/moono/dialog.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public_html/vendor/unisharp/laravel-ckeditor/skins/moono/dialog_ie.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public_html/vendor/unisharp/laravel-ckeditor/skins/moono/dialog_ie7.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public_html/vendor/unisharp/laravel-ckeditor/skins/moono/dialog_ie8.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public_html/vendor/unisharp/laravel-ckeditor/skins/moono/dialog_iequirks.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public_html/vendor/unisharp/laravel-ckeditor/skins/moono/editor.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public_html/vendor/unisharp/laravel-ckeditor/skins/moono/editor_gecko.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public_html/vendor/unisharp/laravel-ckeditor/skins/moono/editor_ie.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public_html/vendor/unisharp/laravel-ckeditor/skins/moono/editor_ie7.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public_html/vendor/unisharp/laravel-ckeditor/skins/moono/editor_ie8.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public_html/vendor/unisharp/laravel-ckeditor/skins/moono/editor_iequirks.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public_html/vendor/unisharp/laravel-ckeditor/skins/moono/icons.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public_html/vendor/unisharp/laravel-ckeditor/skins/moono/icons_hidpi.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public_html/vendor/unisharp/laravel-ckeditor/skins/moono/images/anchor.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public_html/vendor/unisharp/laravel-ckeditor/skins/moono/images/close.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public_html/vendor/unisharp/laravel-ckeditor/skins/moono/images/hidpi/anchor.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public_html/vendor/unisharp/laravel-ckeditor/skins/moono/images/hidpi/close.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public_html/vendor/unisharp/laravel-ckeditor/skins/moono/images/hidpi/lock-open.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public_html/vendor/unisharp/laravel-ckeditor/skins/moono/images/hidpi/lock.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public_html/vendor/unisharp/laravel-ckeditor/skins/moono/images/hidpi/refresh.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public_html/vendor/unisharp/laravel-ckeditor/skins/moono/images/lock-open.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public_html/vendor/unisharp/laravel-ckeditor/skins/moono/images/lock.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public_html/vendor/unisharp/laravel-ckeditor/skins/moono/images/refresh.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public_html/vendor/unisharp/laravel-ckeditor/skins/moono/skin.js" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public_html/vendor/unisharp/laravel-ckeditor/skins/icy_orange/images/hidpi/lock-open.png" afterPath="$PROJECT_DIR$/public_html/vendor/unisharp/laravel-ckeditor/skins/moonocolor/images/hidpi/lock-open.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public_html/vendor/unisharp/laravel-ckeditor/skins/icy_orange/readme.md" afterPath="$PROJECT_DIR$/public_html/vendor/unisharp/laravel-ckeditor/skins/moonocolor/readme.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public_html/vendor/unisharp/laravel-ckeditor/skins/moono/images/arrow.png" afterPath="$PROJECT_DIR$/public_html/vendor/unisharp/laravel-ckeditor/skins/moonocolor/images/arrow.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public_html/vendor/unisharp/laravel-ckeditor/skins/moono/images/spinner.gif" afterPath="$PROJECT_DIR$/public_html/vendor/unisharp/laravel-ckeditor/skins/moonocolor/images/spinner.gif" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public_html/vendor/unisharp/laravel-ckeditor/skins/moono/readme.md" afterPath="$PROJECT_DIR$/public_html/vendor/unisharp/laravel-ckeditor/skins/moonocolor/readme.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/laravel/config/lfm.php" afterPath="$PROJECT_DIR$/laravel/config/lfm.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/laravel/resources/views/backend/modules/promotion/create.blade.php" afterPath="$PROJECT_DIR$/laravel/resources/views/backend/modules/promotion/create.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/laravel/routes/web.php" afterPath="$PROJECT_DIR$/laravel/routes/web.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public_html/vendor/unisharp/laravel-ckeditor/config.js" afterPath="$PROJECT_DIR$/public_html/vendor/unisharp/laravel-ckeditor/config.js" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -94,8 +144,8 @@
       <file leaf-file-name="create.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/laravel/resources/views/backend/modules/promotion/create.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="313">
-              <caret line="92" column="0" lean-forward="false" selection-start-line="92" selection-start-column="0" selection-end-line="92" selection-end-column="79" />
+            <state relative-caret-position="252">
+              <caret line="105" column="70" lean-forward="false" selection-start-line="105" selection-start-column="70" selection-end-line="105" selection-end-column="70" />
               <folding />
             </state>
           </provider>
@@ -104,48 +154,8 @@
       <file leaf-file-name="config.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public_html/vendor/unisharp/laravel-ckeditor/config.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="702">
-              <caret line="39" column="2" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="39" selection-end-column="2" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="list-view.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/laravel/resources/views/vendor/laravel-filemanager/list-view.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="54">
-              <caret line="3" column="50" lean-forward="false" selection-start-line="3" selection-start-column="49" selection-end-line="3" selection-end-column="50" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="resize.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/laravel/resources/views/vendor/laravel-filemanager/resize.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-645">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="tree.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/laravel/resources/views/vendor/laravel-filemanager/tree.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
-              <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="demo.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/laravel/resources/views/vendor/laravel-filemanager/demo.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="468">
-              <caret line="56" column="11" lean-forward="false" selection-start-line="40" selection-start-column="1" selection-end-line="56" selection-end-column="11" />
+            <state relative-caret-position="540">
+              <caret line="30" column="61" lean-forward="true" selection-start-line="30" selection-start-column="61" selection-end-line="30" selection-end-column="61" />
               <folding />
             </state>
           </provider>
@@ -238,8 +248,8 @@
         <option value="$PROJECT_DIR$/laravel/routes/web.php" />
         <option value="$PROJECT_DIR$/laravel/resources/views/vendor/laravel-filemanager/index.blade.php" />
         <option value="$PROJECT_DIR$/laravel/config/lfm.php" />
-        <option value="$PROJECT_DIR$/public_html/vendor/unisharp/laravel-ckeditor/config.js" />
         <option value="$PROJECT_DIR$/laravel/resources/views/backend/modules/promotion/create.blade.php" />
+        <option value="$PROJECT_DIR$/public_html/vendor/unisharp/laravel-ckeditor/config.js" />
       </list>
     </option>
   </component>
@@ -344,36 +354,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="skins" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="laravel_webadmin" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="laravel_webadmin" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public_html" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vendor" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="unisharp" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="laravel-ckeditor" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="adapters" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -732,12 +712,12 @@
       <workItem from="1498983188194" duration="2379000" />
       <workItem from="1499497996059" duration="63000" />
       <workItem from="1499498087118" duration="6160000" />
-      <workItem from="1499512391137" duration="8772000" />
+      <workItem from="1499512391137" duration="10982000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="131665000" />
+    <option name="totallyTimeSpent" value="133875000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -982,6 +962,14 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/public_html/vendor/unisharp/laravel-ckeditor/ckeditor.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/laravel/resources/views/vendor/laravel-filemanager/list-view.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="54">
@@ -1014,26 +1002,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public_html/vendor/unisharp/laravel-ckeditor/ckeditor.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public_html/vendor/unisharp/laravel-ckeditor/config.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="702">
-          <caret line="39" column="2" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="39" selection-end-column="2" />
+        <state relative-caret-position="540">
+          <caret line="30" column="61" lean-forward="true" selection-start-line="30" selection-start-column="61" selection-end-line="30" selection-end-column="61" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/laravel/resources/views/backend/modules/promotion/create.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="313">
-          <caret line="92" column="0" lean-forward="false" selection-start-line="92" selection-start-column="0" selection-end-line="92" selection-end-column="79" />
+        <state relative-caret-position="252">
+          <caret line="105" column="70" lean-forward="false" selection-start-line="105" selection-start-column="70" selection-end-line="105" selection-end-column="70" />
           <folding />
         </state>
       </provider>

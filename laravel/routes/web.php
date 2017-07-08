@@ -13,6 +13,7 @@
 
 Auth::routes();
 
+
 Route::get('/' , 'Frontend\HomeController@index');
 Route::get('/home', 'Frontend\HomeController@index');
 Route::get('/promotion', 'Frontend\PromotionController@index');
@@ -56,11 +57,7 @@ Route::group(['prefix' => 'admin','middleware' => ['admin']], function () {
     Route::post('/promotion/loadPromotionsDataTable', 'Backend\PromotionController@loadPromotionsDataTable')->name('promotion.loadPromotionsDataTable');
 });
 
-Route::group(['before' => 'auth'], function () {
-    Route::get('/laravel-filemanager', '\Unisharp\Laravelfilemanager\controllers\LfmController@show');
-    Route::post('/laravel-filemanager/upload', '\Unisharp\Laravelfilemanager\controllers\LfmController@upload');
-    // list all lfm routes here...
-});
+
 
 
 

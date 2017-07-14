@@ -12,9 +12,9 @@
                     <br/>
 
                     <!-- will be used to show any messages -->
-                    @if (Session::has('message'))
-                        <div class="alert alert-info">{{ Session::get('message') }}</div>
-                    @endif
+                    {{--@if (Session::has('message'))--}}
+                        {{--<div class="alert alert-info">{{ Session::get('message') }}</div>--}}
+                    {{--@endif--}}
 
                     <form data-toggle="validator" role="form"  method="POST" enctype="multipart/form-data" action="{{route('promotion.store')}}" class="form-horizontal form-label-left">
 

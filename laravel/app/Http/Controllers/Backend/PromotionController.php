@@ -60,7 +60,7 @@ class PromotionController extends BaseAdminController
      */
     public function store(Request $request)
     {
-        $validator = Validator::make($request->all(), $this->rules);
+        $validator = Validator::make($request->all(), $this->rules );
         if ($validator->fails()) {
             return redirect()->route('promotion.create')
                 ->withErrors($validator)
@@ -180,5 +180,13 @@ class PromotionController extends BaseAdminController
     private function deleteImageById($id){
         $promotion = $this->promotionRepository->findById($id);
         delete_file($promotion->image_name);
+    }
+
+
+    public function messages()
+    {
+        return [
+            'detail' => 'A title is required',
+        ];
     }
 }

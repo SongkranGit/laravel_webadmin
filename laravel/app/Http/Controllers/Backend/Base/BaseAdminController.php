@@ -22,9 +22,14 @@ abstract class BaseAdminController extends  Controller{
     {
 
         $this->userRepository = $userRepository;
+
+        $this->setDefaultLanguage();
+
     }
 
-
+    function setDefaultLanguage(){
+        session(['locale' => "th"]);
+    }
 
 
 }

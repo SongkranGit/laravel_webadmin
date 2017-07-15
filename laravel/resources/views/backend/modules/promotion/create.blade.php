@@ -62,8 +62,8 @@
                             <label class="control-label col-md-3 col-sm-3 col-xs-12">สถานะ</label>
                             <div class="col-md-6 col-sm-6 col-xs-12">
                                 <select class="form-control" name="is_active">
-                                    <option value="0">Active</option>
-                                    <option value="1">InActive</option>
+                                    <option value="0">ใช้งาน</option>
+                                    <option value="1">ไม่ใช้งาน</option>
                                 </select>
                             </div>
                         </div>
@@ -71,8 +71,8 @@
                         <div class="ln_solid"></div>
                         <div class="form-group">
                             <div class="col-md-9 col-sm-9 col-xs-12 col-md-offset-3">
-                                <button type="submit" class="btn btn-primary "><i class="fa fa-save"></i> บันทึก</button>
-                                <a href="{{url('admin/promotion')}}" class="btn btn-danger"><i class="fa fa-refresh"></i> ยกเลิก</a>
+                                <button type="submit" class="btn btn-primary "><i class="fa fa-save"></i> Save</button>
+                                <a href="{{url('admin/promotion')}}" class="btn btn-danger"><i class="fa fa-refresh"></i> Cancel</a>
                             </div>
                         </div>
                     </form>
@@ -97,34 +97,13 @@
 
     $(document).ready(function () {
 
-        initFileInput();
+        initFilerFileBrowser('#file_upload');
 
+        CKEDITOR.replace('detail' , CKEDITOR_OPTIONS);
 
-        var route_prefix = "{{ url(config('lfm.prefix')) }}";
-        var options = {
-            filebrowserImageBrowseUrl: route_prefix + '?type=Images',
-            filebrowserImageUploadUrl: route_prefix + '/upload?type=Images&_token={{csrf_token()}}',
-            filebrowserBrowseUrl: route_prefix + '?type=Files',
-            filebrowserUploadUrl: route_prefix + '/upload?type=Files&_token={{csrf_token()}}'
-        };
-
-        CKEDITOR.config.customConfig = '{{asset('vendor/unisharp/laravel-ckeditor/config.js')}}}}';
-        CKEDITOR.replace('detail' , options);
     })
 
-    function initFileInput() {
-        $('#file_upload').filer({
-            limit: null,
-            maxSize: null,
-            extensions: null,
-            extensions: ['jpg', 'jpeg', 'png'],
-            changeInput: true,
-            showThumbs: true,
-            captions: {button: 'เลือกไฟล์', feedback: ''},
-            addMore: false,
 
-        });
-    }
 
 </script>
 

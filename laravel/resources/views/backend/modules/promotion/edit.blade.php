@@ -80,8 +80,8 @@
                             <label class="control-label col-md-3 col-sm-3 col-xs-12">สถานะ</label>
                             <div class="col-md-6 col-sm-6 col-xs-12">
                                 <select class="form-control" name="is_active">
-                                    <option value="0" {{$promotion->is_active != null && $promotion->is_active == 0 ? 'selected': '' }}>Active</option>
-                                    <option value="1" {{$promotion->is_active != null && $promotion->is_active == 1 ? 'selected': '' }}>InActive</option>
+                                    <option value="0" {{$promotion->is_active != null && $promotion->is_active == 0 ? 'selected': '' }}>ใช้งาน</option>
+                                    <option value="1" {{$promotion->is_active != null && $promotion->is_active == 1 ? 'selected': '' }}>ไม่ใช้งาน</option>
                                 </select>
                             </div>
                         </div>
@@ -89,8 +89,8 @@
                         <div class="ln_solid"></div>
                         <div class="form-group">
                             <div class="col-md-9 col-sm-9 col-xs-12 col-md-offset-3">
-                                <button type="submit" class="btn btn-primary "><i class="fa fa-save"></i> บันทึก</button>
-                                <a href="{{url('admin/promotion')}}" class="btn btn-danger"><i class="fa fa-refresh"></i> ยกเลิก</a>
+                                <button type="submit" class="btn btn-primary "><i class="fa fa-save"></i> Save</button>
+                                <a href="{{url('admin/promotion')}}" class="btn btn-danger"><i class="fa fa-refresh"></i> Cancel</a>
                             </div>
                         </div>
                     </form>

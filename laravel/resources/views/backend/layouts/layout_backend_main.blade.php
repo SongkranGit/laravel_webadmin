@@ -100,6 +100,31 @@
         }
     });
 
+    // CKEditor Config
+    var route_prefix = "{{ url(config('lfm.prefix')) }}";
+    var CKEDITOR_OPTIONS = {
+        filebrowserImageBrowseUrl: route_prefix + '?type=Images',
+        filebrowserImageUploadUrl: route_prefix + '/upload?type=Images&_token={{csrf_token()}}',
+        filebrowserBrowseUrl: route_prefix + '?type=Files',
+        filebrowserUploadUrl: route_prefix + '/upload?type=Files&_token={{csrf_token()}}'
+    };
+
+    CKEDITOR.config.customConfig = '{{asset('vendor/unisharp/laravel-ckeditor/config.js')}}}}';
+
+    // Initial Filer file browser
+    function initFilerFileBrowser(elementId) {
+        $(elementId).filer({
+            limit: null,
+            maxSize: null,
+            extensions: null,
+            extensions: ['jpg', 'jpeg', 'png'],
+            changeInput: true,
+            showThumbs: true,
+            captions: {button: 'เลือกไฟล์', feedback: ''},
+            addMore: false,
+        });
+    }
+
 </script>
 @stack('scripts')
 </body>

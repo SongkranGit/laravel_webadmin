@@ -3,7 +3,7 @@
   <component name="WebServers">
     <option name="servers">
       <webServer id="af957219-6677-4fd4-909e-aca65b1d7408" name="centrolabmedical" url="http://27.254.85.217">
-        <fileTransfer host="27.254.85.217" port="2121" rootFolder="/domains/centrolabmedical.com/public_html">
+        <fileTransfer host="27.254.85.217" port="2121" rootFolder="/domains/centrolabmedical.com/">
           <advancedOptions>
             <advancedOptions dataProtectionLevel="Private" passiveMode="true" />
           </advancedOptions>

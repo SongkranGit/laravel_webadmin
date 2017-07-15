@@ -14,7 +14,7 @@ class SlideshowController extends Controller
      */
     public function index()
     {
-        return view('backend.slideshow.edit');
+        return view('backend.modules.slideshow.index');
     }
 
     /**
@@ -24,7 +24,7 @@ class SlideshowController extends Controller
      */
     public function create()
     {
-        //
+        return view('backend.modules.slideshow.create');
     }
 
     /**

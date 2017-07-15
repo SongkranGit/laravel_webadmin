@@ -71,7 +71,7 @@
                             <label class="control-label col-md-3 col-sm-3 col-xs-12">ข้อมูลรายละเอียด <span class="required">*</span>
                             </label>
                             <div class="col-md-6 col-sm-6 col-xs-12">
-                                <textarea name="detail" id="detail" class="form-control" rows="5">{{$promotion->detail}}</textarea>
+                                <textarea name="detail" id="detail" class="form-control" rows="5" placeholder="{{Lang::get('validation.attributes.detail')}}">{{$promotion->detail}}</textarea>
                                 <div class="help-block with-errors">{{ $errors->first('detail') }}</div>
                             </div>
                         </div>
